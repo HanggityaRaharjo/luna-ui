@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Layout from "../Layout";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const [countScroll, setCountScroll] = useState(0);
@@ -36,7 +37,9 @@ export const Home = () => {
           </p>
 
           <div className="d-flex" style={{ gap: "15px" }}>
-            <button className="btn-pm">Get Started</button>
+            <Link to={"/documentation"} className="btn-pm">
+              Get Started
+            </Link>
             <button className="btn-sc">Css Generator</button>
             <button className="btn-sc">Cubex Website</button>
           </div>
@@ -47,15 +50,16 @@ export const Home = () => {
           <div
             id="bg-blur"
             style={{
-              width: "300px",
-              height: "300px",
+              width: `calc(300px)`,
+              height: `calc(300px)`,
               background: "linear-gradient( -45deg, #bd34fe 50%, #47caff 50% )",
               filter: "blur(56px)",
               borderRadius: "100%",
               position: "absolute",
-              top: "50%",
-              left: `50%`,
+              top: `calc(50% + ${countScroll}px)`,
+              left: `calc(50% - ${countScroll / 2}px)`,
               transform: `translate(-50%,-50%)`,
+              transition: "all 1s",
             }}
           ></div>
           <img
@@ -162,7 +166,7 @@ export const Home = () => {
         </div>
       </div>
       <div
-        className="overflow-hidden rounded-2xl"
+        className="overflow-hidden rounded-2xl position-relative"
         style={{ marginTop: "50px", marginBottom: "50px", color: "#8999a0" }}
       >
         <div
@@ -313,7 +317,7 @@ export const Home = () => {
         </div>
       </div>
       <div
-        className="d-flex justify-content-center"
+        className="d-flex justify-content-center position-relative"
         style={{ gap: "20px", color: "#8999a0" }}
       >
         <button className="btn-outline-wn">Sponsore Me</button>

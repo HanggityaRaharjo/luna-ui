@@ -30,6 +30,12 @@ p {
   padding: 12px;
   color: #ebf3ff;
   font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.1s;
+}
+.btn-pm:hover {
+  transform: scale(95%);
+  transition: transform 0.1s;
 }
 
 .btn-sc {
@@ -39,7 +45,14 @@ p {
   padding: 12px;
   color: #ebf3ff;
   font-weight: 500;
+  transition: transform 0.1s;
 }
+
+.btn-sc:hover {
+  transform: scale(95%);
+  transition: transform 0.1s;
+}
+
 .btn-outline-wn {
   background-color: transparent;
   border: 1px solid #47474e;
@@ -87,4 +100,7 @@ svg {
   background: transparent;
   border-bottom: 2px solid transparent;
   transition: all 0.1s;
+}
+.text-pm {
+  color: #646cff;
 }

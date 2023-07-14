@@ -16,9 +16,14 @@ const Layout = ({ children }) => {
           paddingLeft: "100px",
           paddingRight: "100px",
           paddingBottom: "100px",
+
+          display: "flex",
+          justifyContent: "center",
         }}
       >
-        {children}
+        <div style={{ maxWidth: "1130px" }} className="w-100">
+          {children}
+        </div>
       </main>
       <Footer />
     </>
