@@ -20,7 +20,10 @@ const CodeSnippet = () => {
   const customStyle = {
     ...dracula,
     'pre[class*="language-"]': {
-      background: "#252529", // Ganti warna background menjadi merah
+      background: "#252529",
+    },
+    tag: {
+      color: "red", // Ganti warna tag menjadi putih
     },
   };
 
