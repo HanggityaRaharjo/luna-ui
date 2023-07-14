@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { dracula } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeSnippet = () => {
   const code = `<!DOCTYPE html>
@@ -17,8 +17,15 @@ const CodeSnippet = () => {
   </html>
   `;
 
+  const customStyle = {
+    ...dracula,
+    'pre[class*="language-"]': {
+      background: "#252529", // Ganti warna background menjadi merah
+    },
+  };
+
   return (
-    <SyntaxHighlighter language="html" style={dracula}>
+    <SyntaxHighlighter language="html" style={customStyle}>
       {code}
     </SyntaxHighlighter>
   );
