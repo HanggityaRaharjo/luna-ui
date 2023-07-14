@@ -1,0 +1,90 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+.text-logo {
+  background: -webkit-linear-gradient(
+    to bottom right,
+    #49c7ff,
+    #bd34fe,
+    #bd34fe
+  );
+  background-image: linear-gradient(to bottom right, #49c7ff, #bd34fe, #bd34fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.font-56 {
+  font-size: 56px;
+}
+
+.btn-pm {
+  background-color: #646cff;
+  border: 1px solid #5358ab;
+  border-radius: 100px;
+  padding: 12px;
+  color: #ebf3ff;
+  font-weight: 500;
+}
+
+.btn-sc {
+  background-color: #313136;
+  border: 1px solid #47474e;
+  border-radius: 100px;
+  padding: 12px;
+  color: #ebf3ff;
+  font-weight: 500;
+}
+.btn-outline-wn {
+  background-color: transparent;
+  border: 1px solid #47474e;
+  border-radius: 100px;
+  padding: 10px;
+  color: #8999a0;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+.btn-outline-wn:hover {
+  border: 1px solid #db2672;
+  border-radius: 100px;
+  padding: 10px;
+  color: #db2672;
+  font-weight: 200;
+  transition: all 0.3s;
+}
+.bg-sc {
+  background-color: #252529;
+  transition: background 0.3s;
+}
+.bg-dk {
+  background-color: #1e1e20;
+}
+.animate-bg-to-white:hover {
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: black;
+}
+
+.animate-color-to-white:hover {
+  color: white;
+  transition: all 0.3s;
+}
+svg {
+  fill: currentColor;
+}
+#navbar-true {
+  background: #1e1e20;
+  border-bottom: 2px solid black;
+  transition: all 0.2s;
+}
+#navbar-false {
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  transition: all 0.1s;
+}
