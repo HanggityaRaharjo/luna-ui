@@ -53,6 +53,10 @@ const router = createBrowserRouter([
     path: "/about",
     element: <About />,
   },
+  {
+    path: "/coba",
+    element: <About />,
+  },
 ]);
 
 const App = () => {
