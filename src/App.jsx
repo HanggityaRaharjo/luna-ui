@@ -7,6 +7,7 @@ import {
   BadgePage,
   AlertPage,
   NavbarPage,
+  TogglePage,
 } from "./pages/ComponentsPage";
 import { IntallPage, ContentDeliveryNetwork, Colors } from "./pages/docs";
 import About from "./pages/About/About";
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path: "/components/navbar",
     element: <NavbarPage />,
+  },
+  {
+    path: "/components/toggle",
+    element: <TogglePage />,
   },
   {
     path: "/about",
