@@ -3,6 +3,20 @@ import Layout from "../Layout";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
+function Card({ txtColor, bgColor, label, icon, image }) {
+  return (
+    <div
+      className={` ${bgColor} ${txtColor} rounded-lg p-4 bg-opacity-50 backdrop-blur-sm`}
+    >
+      {icon}
+      <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+        <img src={image} alt="" />
+      </div>
+      <span className="text-sm">{label}</span>
+    </div>
+  );
+}
+
 export const Home = () => {
   const [countScroll, setCountScroll] = useState(0);
   window.addEventListener("scroll", function () {
@@ -53,67 +67,117 @@ export const Home = () => {
       </div>
 
       <div className="grid grid-cols-3 gap-4 relative">
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-          </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Easy to use</p>
+              <p className="text-[13px]">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+                inventore .
+              </p>
+            </>
+          }
+        />
+      </div>
+
+      <div>
+        <div className="my-14">
+          <div className="text-[32px] font-bold">Tailwinds CSS Components</div>
+          <p className="pt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio
+            molestiae voluptas tempore cumque sunt, quos quae. Eum, alias iure.
           </p>
         </div>
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+        {/* card */}
+
+        <div className="grid grid-cols-3 gap-1 mb-1">
+          <div className="bg-gray-200  h-[150px]">
+            <div className="bg-gray-500">
+              <h3 className="text-white px-2">Alert</h3>
+            </div>
           </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
-          </p>
-        </div>
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
+            2
           </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
-          </p>
-        </div>
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
+            3
           </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
-          </p>
-        </div>
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-          </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
-          </p>
-        </div>
-        <div className="bg-gray-200 rounded-lg p-4">
-          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-          </div>
-          <p className="font-semibold">Easy to use</p>
-          <p className="text-[13px]">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-            inventore .
-          </p>
         </div>
       </div>
+
       <div className="overflow-hidden rounded-2xl relative my-[50px] ">
         <div className="bg-gray-200 flex justify-center items-center mb-1 h-[50px]">
           <p>
