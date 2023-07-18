@@ -57,10 +57,6 @@ const router = createBrowserRouter([
     path: "/coba",
     element: <About />,
   },
-  {
-    path: "/coba2",
-    element: <About />,
-  },
 ]);
 
 const App = () => {
