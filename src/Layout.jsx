@@ -7,23 +7,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main
-        style={{
-          background: "#1e1e20",
-          minHeight: "100vh",
-          color: "#dfdfd6",
-          paddingTop: "70px",
-          paddingLeft: "100px",
-          paddingRight: "100px",
-          paddingBottom: "100px",
-
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <div style={{ maxWidth: "1130px" }} className="w-100">
-          {children}
-        </div>
+      <main className="bg-white min-h-screen text-[#1f2937] p-[100px] pt-[70px] flex justify-center">
+        <div className="max-w-[1280px] w-full">{children}</div>
       </main>
       <Footer />
     </>

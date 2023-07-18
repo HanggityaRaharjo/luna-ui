@@ -8,6 +8,9 @@ p {
   margin: 0;
   padding: 0;
 }
+/* :root {
+  color-scheme: dark;
+} */
 .text-logo {
   background: -webkit-linear-gradient(
     to bottom right,
@@ -22,8 +25,11 @@ p {
 .font-56 {
   font-size: 56px;
 }
+body {
+  margin: 0;
+}
 
-.btn-pm {
+/* .btn-pm {
   background-color: #646cff;
   border: 1px solid #5358ab;
   border-radius: 100px;
@@ -76,7 +82,7 @@ p {
 }
 .bg-dk {
   background-color: #1e1e20;
-}
+} */
 .animate-bg-to-white:hover {
   background-color: white;
   cursor: pointer;
@@ -88,12 +94,10 @@ p {
   color: white;
   transition: all 0.3s;
 }
-svg {
-  fill: currentColor;
-}
+
 #navbar-true {
-  background: #1e1e20;
-  border-bottom: 2px solid black;
+  background: white;
+  border-bottom: 2px solid rgb(229 231 235);
   transition: all 0.2s;
 }
 #navbar-false {
@@ -101,6 +105,32 @@ svg {
   border-bottom: 2px solid transparent;
   transition: all 0.1s;
 }
-.text-pm {
+/* .text-pm {
   color: #646cff;
 }
+
+.custom-tab .nav-link {
+  border: 1px solid #47474e;
+  background: #313136 !important;
+  color: #ebf3ff !important;
+  border-radius: 100px !important;
+  padding: 2px 20px;
+  min-width: 100px;
+  text-align: center;
+}
+.custom-tab .nav-link:hover {
+  border: 1px solid #5358ab;
+  background: #646cff !important;
+  color: #ebf3ff !important;
+}
+
+.custom-tab .nav-link.active {
+  border: 1px solid #5358ab;
+  background: #646cff !important;
+  color: #ebf3ff !important;
+  font-weight: 500;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+} */

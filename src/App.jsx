@@ -1,7 +1,15 @@
 import React from "react";
 import { Home } from "./pages/Home";
-import Documentation from "./pages/Documentation";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  ButtonPage,
+  CardPage,
+  BadgePage,
+  AlertPage,
+  NavbarPage,
+} from "./pages/ComponentsPage";
+import { IntallPage, ContentDeliveryNetwork, Colors } from "./pages/docs";
+import About from "./pages/About/About";
 
 const router = createBrowserRouter([
   {
@@ -9,8 +17,41 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/documentation",
-    element: <Documentation />,
+    path: "/docs/install",
+    element: <IntallPage />,
+  },
+  {
+    path: "/docs/cdn",
+    element: <ContentDeliveryNetwork />,
+  },
+  {
+    path: "/docs/color",
+    element: <Colors />,
+  },
+
+  {
+    path: "/components/button",
+    element: <ButtonPage />,
+  },
+  {
+    path: "/components/card",
+    element: <CardPage />,
+  },
+  {
+    path: "/components/badge",
+    element: <BadgePage />,
+  },
+  {
+    path: "/components/alert",
+    element: <AlertPage />,
+  },
+  {
+    path: "/components/navbar",
+    element: <NavbarPage />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

@@ -1,36 +1,25 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
-import Header from "./components/Header";
-import { Link } from "react-router-dom";
 import SidebarRight from "./components/SidebarRight";
+import NavbarContent from "./components/NavbarContent";
 
 const LayoutContent = ({ children }) => {
+  const dataSideRight = {
+    install: ["install", "tailwind config", "example repositories"],
+    cdn: ["install", "tailwind config", "example repositories"],
+  };
   return (
     <>
-      <div
-        style={{
-          background: "linear-gradient(to right ,#161618 50% ,#1e1e20 50%)",
-
-          minHeight: "100vh",
-          display: "flex",
-          justifyContent: "center",
-          color: "#939399",
-        }}
-      >
-        <div className="w-100 d-flex" style={{ maxWidth: "1366px" }}>
+      <NavbarContent />
+      <div className="bg-gradient-to-r from-white from-50% to-white to-50% min-h-screen flex justify-center text-[#939399]">
+        <div className="w-full flex max-w-[1280px]">
           <Sidebar />
-          <div style={{ width: "60%", backgroundColor: "#1e1e20" }}>
-            <div style={{ minHeight: "100vh" }}>
-              <Header />
-              <main style={{ paddingTop: "60px", color: "#dfdfd7" }}>
-                <div style={{ padding: "20px 80px" }}>{children}</div>
-              </main>
-            </div>
+          <div className="w-[60%] bg-white min-h-screen">
+            <main className="pt-[60px] text-[#1f2937]">
+              <div className="px-[50px] py-[20px]">{children}</div>
+            </main>
           </div>
 
-          <SidebarRight />
+          <SidebarRight menuData={dataSideRight} />
         </div>
       </div>
     </>

@@ -2,15 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div
-      className="d-flex justify-content-center align-items-center"
-      style={{
-        height: "100px",
-        background: "#1e1e20",
-        color: "#8999a0",
-        borderTop: "2px solid black",
-      }}
-    >
+    <div className="flex justify-center items-center h-[100px] bg-white text-[#1f2937] border-t border-gray-200">
       <p className="m-0">Copyright ©2023 CUBEX CORPORATION</p>
     </div>
   );

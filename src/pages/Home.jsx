@@ -1,325 +1,225 @@
 import { useState } from "react";
 import Layout from "../Layout";
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
 
 export const Home = () => {
   const [countScroll, setCountScroll] = useState(0);
   window.addEventListener("scroll", function () {
-    console.log(this.scrollY);
     setCountScroll(this.scrollY);
   });
 
   return (
     <Layout>
-      <div
-        className="d-flex justify-content-between align-items-center "
-        style={{ marginTop: "40px", marginBottom: "50px" }}
-      >
+      <div className="mt-20 mb-[80px] flex justify-between items-center">
         {/* Kiri */}
-        <div className="w-50" style={{ lineHeight: 1 }}>
+        <div className="w-1/2" style={{ lineHeight: 1 }}>
+          <p className="text-logo text-[64px] font-bold">LUNA UI</p>
+          <p className="font-56 text-[64px] font-semibold">Component UI</p>
           <p
-            className="text-logo m-0"
-            style={{
-              fontSize: "56px",
-              fontWeight: "700",
-            }}
+            className="font-56 text-[64px] font-semibold"
+            style={{ marginBottom: "1.5rem" }}
           >
-            CBXUI
+            {" "}
+            For TailwindCSS
           </p>
-          <p className="font-56 m-0 fw-700 ">Libray UI</p>
-          <p className="font-56 m-0 fw-700 mb-4"> For Cubex Styling</p>
 
-          <p
-            className="fw-700 mb-5"
-            style={{ fontSize: "20px", color: "#9999a0" }}
-          >
+          <p className="fw-700 text-[20px] text-[#9999a0] mb-12">
             Copy the code & paste it to your project
           </p>
 
-          <div className="d-flex" style={{ gap: "15px" }}>
-            <Link to={"/documentation"} className="btn-pm">
+          <div className="flex gap-[15px] items-center">
+            <Link
+              to={"/docs/install"}
+              className="btn btn-primary flex items-center"
+            >
               Get Started
             </Link>
-            <button className="btn-sc">Css Generator</button>
-            <button className="btn-sc">Cubex Website</button>
+            <Link className="btn flex items-center">Theme</Link>
           </div>
         </div>
 
         {/* Kanan */}
-        <div className="w-50 position-relative d-flex justify-content-center align-items-center">
+        <div className="w-1/2 relative flex justify-center items-center">
           <div
-            id="bg-blur"
+            className="blur-[56px] bg-gradient-to-tl from-[#bd34fe] from-50% to-[#47caff] to-50% absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 rounded-full w-80 h-80"
             style={{
-              width: `calc(300px)`,
-              height: `calc(300px)`,
-              background: "linear-gradient( -45deg, #bd34fe 50%, #47caff 50% )",
-              filter: "blur(56px)",
-              borderRadius: "100%",
-              position: "absolute",
               top: `calc(50% + ${countScroll}px)`,
               left: `calc(50% - ${countScroll / 2}px)`,
-              transform: `translate(-50%,-50%)`,
-              transition: "all 1s",
             }}
           ></div>
-          <img
-            src="logo.png"
-            height={"180px"}
-            alt=""
-            style={{ position: "relative" }}
-          />
+          <img src={Logo} height={"180px"} alt="" className="relative" />
         </div>
       </div>
-      <div
-        class="row g-3 position-relative"
-        style={{ paddingBottom: "50px", borderBottom: "3px solid black" }}
-      >
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
+
+      <div className="grid grid-cols-3 gap-4 relative">
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
           </div>
-        </div>
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div className="bg-sc rounded-lg p-md">
-            <div
-              className="bg-dk rounded-lg mb-2"
-              style={{ width: "40px", height: "40px", padding: "2px" }}
-            >
-              <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
-            </div>
-            <p>Easy to use</p>
-            <p style={{ fontSize: "13px", color: "#9c9ca3" }}>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-              inventore .
-            </p>
-          </div>
-        </div>
-      </div>
-      <div
-        className="overflow-hidden rounded-2xl position-relative"
-        style={{ marginTop: "50px", marginBottom: "50px", color: "#8999a0" }}
-      >
-        <div
-          className="bg-sc d-flex justify-content-center align-items-center"
-          style={{ marginBottom: "4px", height: "50px" }}
-        >
-          <p className="m-0">
-            <span style={{ fontSize: "30px" }}>🙌</span> Thanks To :
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
           </p>
         </div>
-        <div class="row g-1" style={{ marginBottom: "4px" }}>
-          <div className="col-md-4 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "150px" }}
-            >
-              1
-            </div>
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
           </div>
-          <div className="col-md-4 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "150px" }}
-            >
-              2
-            </div>
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
+          </p>
+        </div>
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
           </div>
-          <div className="col-md-4 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "150px" }}
-            >
-              3
-            </div>
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
+          </p>
+        </div>
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+          </div>
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
+          </p>
+        </div>
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+          </div>
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
+          </p>
+        </div>
+        <div className="bg-gray-200 rounded-lg p-4">
+          <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+            <img src="icon/easy-icon.svg" style={{ width: "100%" }} alt="" />
+          </div>
+          <p className="font-semibold">Easy to use</p>
+          <p className="text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
+            inventore .
+          </p>
+        </div>
+      </div>
+      <div className="overflow-hidden rounded-2xl relative my-[50px] ">
+        <div className="bg-gray-200 flex justify-center items-center mb-1 h-[50px]">
+          <p>
+            <span className="text-[30px]">🙌</span> Thanks To :
+          </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-1 mb-1">
+          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
+            1
+          </div>
+          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
+            2
+          </div>
+          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
+            3
           </div>
         </div>
+
         <div
-          className="bg-sc d-flex justify-content-center align-items-center "
+          className="bg-gray-200 d-flex justify-content-center align-items-center "
           style={{ marginBottom: "4px", height: "50px" }}
         >
           <p className="m-0">
             <span style={{ fontSize: "30px" }}>📢</span> Sponsor:
           </p>
         </div>
-        <div
-          className="bg-sc d-flex justify-content-center align-items-center animate-bg-to-white"
-          style={{ marginBottom: "4px", height: "200px" }}
-        >
-          <p className="m-0">1</p>
+        <div className="bg-gray-200 flex justify-center items-center animate-bg-to-white mb-1 h-[200px]">
+          <p>1</p>
         </div>
-        <div class="row g-1">
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              1
-            </div>
+        <div className="grid grid-cols-6 gap-1">
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            1
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              2
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              3
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              4
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              5
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              6
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              7
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              8
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              9
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              10
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              11
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
-          <div className="col-md-2 ">
-            <div
-              className="bg-sc animate-bg-to-white d-flex justify-content-center align-items-center"
-              style={{ height: "100px" }}
-            >
-              12
-            </div>
+          <div
+            className="bg-gray-200 animate-bg-to-white d-flex justify-content-center align-items-center"
+            style={{ height: "100px" }}
+          >
+            2
           </div>
         </div>
       </div>
-      <div
-        className="d-flex justify-content-center position-relative"
-        style={{ gap: "20px", color: "#8999a0" }}
-      >
+      <div className="flex justify-center relative gap-5">
         <button className="btn-outline-wn">Sponsore Me</button>
         <button className="btn-outline-wn">Buy Me a coffee</button>
       </div>

@@ -1,45 +1,26 @@
-import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo.png";
+import { useState } from "react";
 
 const Navbar = () => {
   const [navbarBg, setNavbarBg] = useState(false);
   window.addEventListener("scroll", function () {
-    console.log(this.scrollY);
     setNavbarBg(this.scrollY == 0 ? false : true);
   });
   return (
     <nav
       id={`${navbarBg ? "navbar-true" : "navbar-false"}`}
-      className={` d-flex justify-content-center align-items-center position-fixed w-100`}
-      style={{
-        height: "60px",
-        color: "#dfdfd6",
-        zIndex: "999",
-      }}
+      className="h-[60px] flex justify-center items-center w-full fixed  text-[#1f2937] z-[999]"
     >
-      <div
-        className="d-flex justify-content-between w-100"
-        style={{ maxWidth: "1366px", height: "100%" }}
-      >
-        <div className="d-flex align-items-center" style={{ gap: "15px" }}>
-          <Link to={"/"} style={{ textDecoration: "none", color: "inherit" }}>
-            <div className="d-flex align-items-center" style={{ gap: "10px" }}>
-              <img src="logo.png" width={"50px"} alt="" />
-              <p className="m-0" style={{ fontSize: "16px" }}>
-                CBXUI
-              </p>
+      <div className="justify-between flex  max-w-[1280px] h-full w-full">
+        <div className="flex items-center gap-[15px]">
+          <Link to={"/"}>
+            <div className="items-center  flex gap-[10px]">
+              <img src={Logo} width={"50px"} alt="" />
+              <p className="text-[16px] text-logo font-bold">LUNA UI</p>
             </div>
           </Link>
-          <div
-            className="d-flex align-items-center justify-content-around"
-            style={{
-              height: "35px",
-              background: "#161618",
-              color: "#8f8f96",
-              width: "160px",
-              borderRadius: "4px",
-            }}
-          >
+          <div className="h-[35px] bg-white shadow-md border border-gray-200 text-[#1f2937] w-[160px] rounded flex justify-around items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -56,61 +37,40 @@ const Navbar = () => {
               />
             </svg>
 
-            <p className="m-0" style={{ fontSize: "14px" }}>
-              Search
-            </p>
-            <p
-              className="m-0"
-              style={{
-                borderRadius: "5px",
-                padding: "0px 5px",
-                border: "1px solid #29292d",
-              }}
-            >
-              CTRLK
-            </p>
+            <p className="text-[14px]">Search</p>
+            <p className="rounded-[5px] px-[5px] border">CTRLK</p>
           </div>
         </div>
-        <div className="d-flex align-items-center" style={{ gap: "10px" }}>
+        <div className="gap-[10px] flex items-center">
           <div
-            className="d-flex align-items-center"
+            className="gap-[10px] px-[16px] flex items-center"
             style={{
-              gap: "10px",
               borderRight: "2px solid #9999a0",
-              padding: "0px 16px",
             }}
           >
-            <p className="m-0" style={{ fontSize: "14px" }}>
-              Documentation
-            </p>
-            <p className="m-0" style={{ fontSize: "14px" }}>
-              Guide
-            </p>
-            <p className="m-0" style={{ fontSize: "14px" }}>
-              Config
-            </p>
-            <p className="m-0" style={{ fontSize: "14px" }}>
-              Version
-            </p>
+            <p className="text-[16px]">Documentation</p>
+            <p className="text-[16px]">Guide</p>
+            <p className="text-[16px]">Config</p>
+            <p className="text-[16px]">Version 1.0.0</p>
           </div>
-          <div className="d-flex" style={{ gap: "8px" }}>
-            <a href="" style={{ color: "#9999a0" }}>
+          <div className="flex items-center gap-2 ">
+            <a href="">
               <svg
                 width="25px"
                 height="25px"
                 viewBox="0 0 24 24"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 fill="#000000"
                 className="animate-color-to-white"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
 
                 <g id="SVGRepo_iconCarrier">
@@ -119,9 +79,9 @@ const Navbar = () => {
                   <g
                     id="页面-1"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     {" "}
                     <g
@@ -137,7 +97,7 @@ const Navbar = () => {
                         <path
                           d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
                           id="MingCute"
-                          fill-rule="nonzero"
+                          fillRule="nonzero"
                         >
                           {" "}
                         </path>{" "}
@@ -154,22 +114,22 @@ const Navbar = () => {
                 </g>
               </svg>
             </a>
-            <a href="" style={{ color: "#9999a0" }}>
+            <a href="">
               <svg
                 width="19px"
                 height="19px"
                 viewBox="0 0 20 20"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 fill="#000000"
                 className="animate-color-to-white"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 ></g>
                 <g id="SVGRepo_iconCarrier">
                   {" "}
@@ -178,9 +138,9 @@ const Navbar = () => {
                   <g
                     id="Page-1"
                     stroke="none"
-                    stroke-width="1"
+                    strokeWidth="1"
                     fill="none"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   >
                     {" "}
                     <g
