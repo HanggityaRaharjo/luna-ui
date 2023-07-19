@@ -51,7 +51,14 @@ const IntallPage = () => {
       <div className="mb-4">
         <CodeSnippet
           type={"terminal"}
-          code={`npm i -D lunaui@latest`}
+          code={`npm install lunaui-css`}
+          className="rounded-[10px]"
+        />
+      </div>
+      <div className="mb-4">
+        <CodeSnippet
+          type={"terminal"}
+          code={`yarn add lunaui-css`}
           className="rounded-[10px]"
         />
       </div>
@@ -64,7 +71,7 @@ const IntallPage = () => {
           type={"javascript"}
           code={`module.exports = {
   //...
-  plugins:[require("lunaui")],
+  plugins:[require("lunaui-css")],
 }`}
         />
       </div>
