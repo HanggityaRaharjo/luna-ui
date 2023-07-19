@@ -9,6 +9,7 @@ import {
   NavbarPage,
   TogglePage,
   ProgressPage,
+  SelectPage,
 } from "./pages/ComponentsPage";
 import { IntallPage, ContentDeliveryNetwork, Colors } from "./pages/docs";
 import About from "./pages/About/About";
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
   {
     path: "/components/progress",
     element: <ProgressPage />,
+  },
+  {
+    path: "/components/select",
+    element: <SelectPage />,
   },
   {
     path: "/about",
