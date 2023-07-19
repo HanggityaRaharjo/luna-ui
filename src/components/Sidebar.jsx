@@ -152,6 +152,18 @@ const Sidebar = () => {
               <span> Card </span>
             </div>
           </Link>
+
+          <Link to={"/components/toggle"}>
+            <div
+              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+                stateUrl == "/components/toggle"
+                  ? "bg-neutral text-white"
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Toggle </span>
+            </div>
+          </Link>
         </div>
         {/* End Sidebar Menu */}
       </div>

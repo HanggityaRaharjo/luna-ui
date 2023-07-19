@@ -25,26 +25,26 @@ export const button = {
   //   "padding-top": ".625rem",
   //   "padding-bottom": ".625rem",
   // },
-  ".badge": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "transparent",
-    "--bs-badge-border-color": "#fff",
-    "text-transform": "uppercase",
-    "border-width": "1px",
-    height: "fit-content",
-    width: "fit-content",
-    height: "-moz-fit-content",
-    width: "-moz-fit-content",
-    "font-size": "0.7rem",
-    "padding-top": "2px",
-    "padding-bottom": "2px",
-    "padding-left": "0.563rem",
-    "padding-right": "0.563rem",
-    "border-radius": "100px",
-    "background-color": "var(--bs-badge-bg)",
-    color: "var(--bs-badge-color)",
-    "border-color": "var(--bs-badge-border-color)",
-  },
+  // ".badge": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "transparent",
+  //   "--bs-badge-border-color": "#fff",
+  //   "text-transform": "uppercase",
+  //   "border-width": "1px",
+  //   height: "fit-content",
+  //   width: "fit-content",
+  //   height: "-moz-fit-content",
+  //   width: "-moz-fit-content",
+  //   "font-size": "0.7rem",
+  //   "padding-top": "2px",
+  //   "padding-bottom": "2px",
+  //   "padding-left": "0.563rem",
+  //   "padding-right": "0.563rem",
+  //   "border-radius": "100px",
+  //   "background-color": "var(--bs-badge-bg)",
+  //   color: "var(--bs-badge-color)",
+  //   "border-color": "var(--bs-badge-border-color)",
+  // },
   // End Root Components
   // ".btn:hover": {
   //   "background-color": "var(--bs-btn-hover-bg)",
@@ -114,46 +114,46 @@ export const button = {
   // },
   // End Button Color
   // Badge Color
-  ".badge-primary": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--primary))",
-    "--bs-badge-border-color": "rgb(var(--primary))",
-  },
-  ".badge-secondary": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--secondary))",
-    "--bs-badge-border-color": "rgb(var(--secondary))",
-  },
-  ".badge-accent": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--accent))",
-    "--bs-badge-border-color": "rgb(var(--accent))",
-  },
-  ".badge-light": {
-    "--bs-badge-color": "#161618",
-    "--bs-badge-bg": "rgb(var(--light))",
-    "--bs-badge-border-color": "rgb(var(--light))",
-  },
-  ".badge-info": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--info))",
-    "--bs-badge-border-color": "rgb(var(--info))",
-  },
-  ".badge-success": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--success))",
-    "--bs-badge-border-color": "rgb(var(--success))",
-  },
-  ".badge-warning": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--warning))",
-    "--bs-badge-border-color": "rgb(var(--warning))",
-  },
-  ".badge-error": {
-    "--bs-badge-color": "#fff",
-    "--bs-badge-bg": "rgb(var(--error))",
-    "--bs-badge-border-color": "rgb(var(--error))",
-  },
+  // ".badge-primary": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--primary))",
+  //   "--bs-badge-border-color": "rgb(var(--primary))",
+  // },
+  // ".badge-secondary": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--secondary))",
+  //   "--bs-badge-border-color": "rgb(var(--secondary))",
+  // },
+  // ".badge-accent": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--accent))",
+  //   "--bs-badge-border-color": "rgb(var(--accent))",
+  // },
+  // ".badge-light": {
+  //   "--bs-badge-color": "#161618",
+  //   "--bs-badge-bg": "rgb(var(--light))",
+  //   "--bs-badge-border-color": "rgb(var(--light))",
+  // },
+  // ".badge-info": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--info))",
+  //   "--bs-badge-border-color": "rgb(var(--info))",
+  // },
+  // ".badge-success": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--success))",
+  //   "--bs-badge-border-color": "rgb(var(--success))",
+  // },
+  // ".badge-warning": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--warning))",
+  //   "--bs-badge-border-color": "rgb(var(--warning))",
+  // },
+  // ".badge-error": {
+  //   "--bs-badge-color": "#fff",
+  //   "--bs-badge-bg": "rgb(var(--error))",
+  //   "--bs-badge-border-color": "rgb(var(--error))",
+  // },
   // End Badge Color
   // Additional
   // ".btn-outline": {
@@ -177,9 +177,9 @@ export const button = {
   // ".btn-wide": {
   //   "min-width": "16rem",
   // },
-  ".badge-outline": {
-    "border-color": "var(--bs-badge-bg)",
-    "background-color": "transparent",
-    color: "var(--bs-badge-bg)",
-  },
+  // ".badge-outline": {
+  //   "border-color": "var(--bs-badge-bg)",
+  //   "background-color": "transparent",
+  //   color: "var(--bs-badge-bg)",
+  // },
 };
