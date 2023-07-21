@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --neutral: 42, 50, 60;
   --default: 42, 50, 60;

@@ -2,6 +2,12 @@ import { useState } from "react";
 import Layout from "../Layout";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
+import react from "../assets/react.png";
+import laravel from "../assets/laravel.svg";
+import vite from "../assets/vite.png";
+import django from "../assets/django.svg";
+import next from "../assets/next.svg";
+import nuxt from "../assets/nuxt.svg";
 
 function Card({ txtColor, bgColor, label, icon, image }) {
   return (
@@ -10,9 +16,22 @@ function Card({ txtColor, bgColor, label, icon, image }) {
     >
       {icon}
       <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
-        <img src={image} alt="" />
+        <img src={image} alt="" className="h-10" />
       </div>
       <span className="text-sm">{label}</span>
+    </div>
+  );
+}
+
+function OtherCard(props) {
+  return (
+    <div className="bg-white flex justify-center items-center h-[150px] border border-gray-200 rounded-md hover:shadow-md ">
+      <div>
+        <div className="flex justify-center">
+          <img src={props.image} alt="" className="h-10" />
+        </div>
+        <span>{props.span}</span>
+      </div>
     </div>
   );
 }
@@ -24,7 +43,7 @@ export const Home = () => {
   });
 
   return (
-    <Layout>
+    <Layout className="home">
       <div className="mt-20 mb-[80px] flex justify-between items-center">
         {/* Kiri */}
         <div className="w-1/2" style={{ lineHeight: 1 }}>
@@ -153,7 +172,7 @@ export const Home = () => {
         />
       </div>
 
-      <div>
+      <div className=" relative">
         <div className="my-14">
           <div className="text-[32px] font-bold">Tailwinds CSS Components</div>
           <p className="pt-4">
@@ -162,43 +181,257 @@ export const Home = () => {
           </p>
         </div>
         {/* card */}
-
+        {/* Alert */}
         <div className="grid grid-cols-3 gap-1 mb-1">
-          <div className="bg-gray-200  h-[150px]">
-            <div className="bg-gray-500">
-              <h3 className="text-white px-2">Alert</h3>
+          <div className="hover:shadow-md bg-white rounded-md bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Alert</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div>
+                  <div className="bg-gray-200 h-5  rounded-md flex items-center p-2 w-40">
+                    <div className="bg-blue-500 h-1 w-36" />
+                  </div>
+                  <div className="bg-gray-200 h-5  rounded-md flex items-center justify-between p-2 w-40 my-1">
+                    <div className="bg-blue-500 h-1 w-14" />
+                    <div className="text-xs text-blue-500 -mt-1">x</div>
+                  </div>
+                  <div className="bg-gray-200 h-5  rounded-md flex items-center justify-between p-2 w-40 my-1">
+                    <div className="bg-blue-500 h-1 w-20" />
+                    <div className="text-xs text-blue-500 -mt-1">x</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
-            2
+
+          {/* Navbar */}
+          <div className="hover:shadow-md bg-white rounded-md bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Navbar</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div className="bg-gray-200 h-8 w-3/4 rounded-sm flex justify-between items-center p-2">
+                  <div className="bg-gray-400 h-2 w-6 rounded-sm" />
+                  <div className="flex gap-1">
+                    <div className="bg-gray-400 h-1 w-4" />
+                    <div className="bg-gray-400 h-1 w-4" />
+                    <div className="bg-gray-400 h-1 w-4" />
+                    <div className="bg-gray-400 h-1 w-4" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
-            3
+
+          {/* Card */}
+          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Cards</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div className="bg-gray-200 rounded-md flex items-center p-2 w-32">
+                  <div>
+                    <div className="bg-gray-400 h-20 w-28" />
+                    <div className="bg-gray-400 h-[10px] w-10 mt-2" />
+                    <div className="bg-gray-400 h-1 w-24 mt-1" />
+                    <div className="bg-gray-400 h-1 w-24 mt-1" />
+                    <div className="mt-2 flex justify-end">
+                      <div className="bg-gray-400 h-2 w-8 rounded-md" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Badge */}
+          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center  justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Badge</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div className="bg-gray-200 rounded-md flex items-center p-2 w-32 relative">
+                  <div className="bg-gray-300 h-5 w-28" />
+                  <div>
+                    <div className="bg-blue-500 h-3 w-3 rounded-xl absolute -top-1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Modals */}
+          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Modals</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div className=" w-40 h-24 border border-gray-100 bg-gray-200 ">
+                  <div className="border-b border-gray-300  h-4 flex  justify-between items-center p-2">
+                    <div className="bg-gray-300 h-1 w-20 mt-1" />
+                    <div className="text-[10px] text-gray-400">x</div>
+                  </div>
+                  <div className="flex justify-center">
+                    <div className="mt-5">
+                      <div className="bg-gray-300 h-1 w-32 mt-1" />
+                      <div className="bg-gray-300 h-1 w-32 mt-1" />
+                      <div className="bg-gray-300 h-1 w-20 mt-1" />
+                    </div>
+                  </div>
+                  <div className="flex justify-end  gap-1 p-2">
+                    <div className="bg-blue-500 h-3 w-8 rounded-sm mt-1" />
+                    <div className="bg-gray-300 h-3 w-8 rounded-sm mt-1" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Footer */}
+          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
+            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
+              <h3 className="px-2">Footer</h3>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                />
+              </svg>
+            </div>
+            <div className="border border-gray-100  h-[200px] rounded-b-md">
+              <div className="flex justify-center items-center h-full">
+                <div className=" w-52 h-14 bg-gray-200 ">
+                  <div className="flex justify-between items-center h-6 p-2">
+                    <div className="bg-gray-400 h-3 w-10 rounded-md" />
+                    <div className="flex justify-between gap-1">
+                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
+                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
+                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
+                    </div>
+                  </div>
+                  <div className=" flex justify-center mt-1">
+                    <div className="h-[1px] w-44 bg-gray-500" />
+                  </div>
+                  <div className=" flex justify-center gap-1 mt-4">
+                    <div className="h-[1px] w-3 bg-gray-500" />
+                    <div className="h-[1px] w-20 bg-gray-500" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="overflow-hidden rounded-2xl relative my-[50px] ">
-        <div className="bg-gray-200 flex justify-center items-center mb-1 h-[50px]">
-          <p>
-            <span className="text-[30px]">🙌</span> Thanks To :
-          </p>
+      <div className=" rounded-2xl relative mt-32 ">
+        <div className="flex justify-center items-center mb-1 h-[50px]">
+          <div>
+            <h2 className="text-[32px] font-bold text-center">
+              Luna in other technologies
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+              doloremque velit aliquid ratione tenetur doloribus sit, quae
+              soluta inventore voluptatibus!
+            </p>
+          </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-1 mb-1">
-          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
-            1
-          </div>
-          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
-            2
-          </div>
-          <div className="bg-gray-200 animate-bg-to-white flex justify-center items-center h-[150px]">
-            3
-          </div>
+        <div className="grid grid-cols-3 gap-2 mt-10">
+          <OtherCard image={laravel} span="Luna React" />
+          <OtherCard image={react} span="Luna React" />
+          <OtherCard image={vite} span="Luna React" />
+          <OtherCard image={next} span="Luna React" />
+          <OtherCard image={nuxt} span="Luna React" />
+          <OtherCard image={django} span="Luna React" />
         </div>
 
         <div
-          className="bg-gray-200 d-flex justify-content-center align-items-center "
+          className="bg-gray-200 d-flex justify-content-center align-items-center  my-[50px]"
           style={{ marginBottom: "4px", height: "50px" }}
         >
           <p className="m-0">
