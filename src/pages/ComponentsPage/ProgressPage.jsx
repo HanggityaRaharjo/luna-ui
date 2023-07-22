@@ -20,7 +20,7 @@ const ProgressPage = () => {
           <span className="">#</span> Progress
         </p>
         <ViewComponent>
-          <input type="checkbox" className="toggle" />
+          <progress className="progress" value="70" max="100"></progress>
         </ViewComponent>
         <CodeSnippet
           type="html"

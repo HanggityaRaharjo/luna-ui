@@ -415,3 +415,34 @@ pre {
 }
 
 /* End Toggle */
+
+/* progress */
+.progress {
+  position: relative;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  height: 0.5rem;
+  background-color: red;
+  border-radius: 1rem;
+  vertical-align: baseline;
+}
+
+/*
+.progress {
+  position: relative;
+  accent-color: red;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  overflow: hidden;
+  height: 0.5rem;
+  background-color: red;
+  border-radius: var(--rounded-box, 1rem);
+}
+
+ */
+/* End progress */
