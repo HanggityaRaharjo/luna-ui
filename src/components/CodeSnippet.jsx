@@ -8,7 +8,7 @@ const CodeSnippet = ({ code, type, className }) => {
   const customStyle = {
     ...dracula,
     'pre[class*="language-"]': {
-      background: "rgb(42, 50, 60)",
+      background: "rgb(30, 31, 56)",
       padding: type == "terminal" ? "0px" : "30px 10px 10px 10px", // Atur padding "30px 10px 10px 10px"
       borderRadius: "10px",
       margin: "0",
