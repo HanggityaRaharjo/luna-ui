@@ -33,11 +33,11 @@ const TogglePage = () => {
           <span className="">#</span> Toggle On
         </p>
         <ViewComponent>
-          <input type="checkbox" className="toggle" checked />
+          <input type="checkbox" className="toggle" checked={"false"} />
         </ViewComponent>
         <CodeSnippet
           type="html"
-          code={`<input type="checkbox" className="toggle"/>`}
+          code={`<input type="checkbox" className="toggle" checked/>`}
         />
       </section>
       {/* End Simple Toggle */}
@@ -47,13 +47,41 @@ const TogglePage = () => {
           <span className="">#</span> Toggle Colors
         </p>
         <ViewComponent>
-          <input type="checkbox" className="toggle toggle-primary" checked />
-          <input type="checkbox" className="toggle toggle-secondary" checked />
-          <input type="checkbox" className="toggle toggle-accent" checked />
-          <input type="checkbox" className="toggle toggle-info" checked />
-          <input type="checkbox" className="toggle toggle-success" checked />
-          <input type="checkbox" className="toggle toggle-warning" checked />
-          <input type="checkbox" className="toggle toggle-error" checked />
+          <input
+            type="checkbox"
+            className="toggle toggle-primary"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-secondary"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-accent"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-info"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-success"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-warning"
+            checked={"false"}
+          />
+          <input
+            type="checkbox"
+            className="toggle toggle-error"
+            checked={"false"}
+          />
         </ViewComponent>
         <CodeSnippet
           type="html"

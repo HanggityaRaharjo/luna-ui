@@ -164,6 +164,30 @@ const Sidebar = () => {
               <span> Toggle </span>
             </div>
           </Link>
+
+          <Link to={"/components/select"}>
+            <div
+              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+                stateUrl == "/components/select"
+                  ? "bg-neutral text-white"
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Select </span>
+            </div>
+          </Link>
+
+          <Link to={"/components/progress"}>
+            <div
+              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+                stateUrl == "/components/progress"
+                  ? "bg-neutral text-white"
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Progress </span>
+            </div>
+          </Link>
         </div>
         {/* End Sidebar Menu */}
       </div>
