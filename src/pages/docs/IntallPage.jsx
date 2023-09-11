@@ -24,12 +24,12 @@ const IntallPage = () => {
           <p className="text-white">Tailwind Plugin</p>
         </Link>
 
-        <Link
+        {/* <Link
           to={"/docs/cdn"}
           className="w-32 translate-y-[2px] h-10 flex justify-center items-center border border-transparent group"
         >
           <div className="group-hover:text-[#646cff]">Use CDN</div>
-        </Link>
+        </Link> */}
       </div>
       {/* End Tab */}
       <p className="mb-4">
@@ -78,7 +78,7 @@ const IntallPage = () => {
       <p className="font-semibold text-2xl mb-4">
         <span className="">#</span>LUNAUI Example Repositories
       </p>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-5">
         {/* Next JS */}
         <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
           <div>

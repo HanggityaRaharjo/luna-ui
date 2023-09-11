@@ -21,12 +21,34 @@ p {
   background-image: linear-gradient(to bottom right, #49c7ff, #bd34fe, #bd34fe);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
 }
 .font-56 {
   font-size: 56px;
 }
 body {
   margin: 0;
+}
+
+/* Customize the scrollbar track */
+#sidebar-menu::-webkit-scrollbar {
+  width: 0px; /* Set the width of the scrollbar */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+#sidebar-menu::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar thumb */
+}
+
+/* Customize the scrollbar track on hover */
+#sidebar-menu::-webkit-scrollbar:hover {
+  background: #555; /* Set the background color of the scrollbar track on hover */
+}
+
+/* Customize the scrollbar thumb on hover */
+#sidebar-menu::-webkit-scrollbar-thumb:hover {
+  background: #333; /* Set the color of the scrollbar thumb on hover */
 }
 
 /* .btn-pm {
@@ -134,3 +156,27 @@ a {
   text-decoration: none !important;
   color: inherit !important;
 } */
+#sidebar-home.active {
+  border: 1px solid red;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  animation-name: example;
+  animation-duration: 150ms;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#sidebar-home {
+  diplay: none;
+}
+
+@keyframes example {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

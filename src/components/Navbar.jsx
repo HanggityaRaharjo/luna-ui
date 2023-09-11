@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { useState } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isSidebarShow, setIsSidebarShow }) => {
   const [navbarBg, setNavbarBg] = useState(false);
   window.addEventListener("scroll", function () {
     setNavbarBg(this.scrollY == 0 ? false : true);
@@ -10,17 +10,17 @@ const Navbar = () => {
   return (
     <nav
       id={`${navbarBg ? "navbar-true" : "navbar-false"}`}
-      className="h-[60px] flex justify-center items-center w-full fixed  text-[#1f2937] z-[999]"
+      className="h-[60px] top-0 flex justify-center items-center w-full fixed  text-[#1f2937] z-[999] px-5"
     >
       <div className="justify-between flex  max-w-[1280px] h-full w-full">
         <div className="flex items-center gap-[15px]">
           <Link to={"/"}>
             <div className="items-center  flex gap-[10px]">
-              <img src={Logo} width={"50px"} alt="" />
+              {/* <img src={Logo} width={"50px"} alt="" /> */}
               <p className="text-[16px] text-logo font-bold">LUNA UI</p>
             </div>
           </Link>
-          <div className="h-[35px] bg-white shadow-md border border-gray-200 text-[#1f2937] w-[160px] rounded flex justify-around items-center">
+          <div className="h-[35px] bg-white shadow-md border border-gray-200 text-[#1f2937] w-[160px] rounded lg:flex hidden justify-around items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -41,14 +41,16 @@ const Navbar = () => {
             <p className="rounded-[5px] px-[5px] border">CTRLK</p>
           </div>
         </div>
-        <div className="gap-[10px] flex items-center">
+        <div className="gap-[10px] lg:flex hidden items-center ">
           <div
             className="gap-[10px] px-[16px] flex items-center"
             style={{
               borderRight: "2px solid #9999a0",
             }}
           >
-            <p className="text-[16px]">Documentation</p>
+            <Link to={"/docs/install"} className="text-[16px]">
+              Documentation
+            </Link>
             <p className="text-[16px]">Guide</p>
             <p className="text-[16px]">Config</p>
             <p className="text-[16px]">Version 1.0.0</p>
@@ -168,6 +170,24 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+        {/* Responsive Nav */}
+        <div className="flex items-center lg:hidden">
+          <button onClick={() => setIsSidebarShow(true)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                fillRule="evenodd"
+                d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                clipRule="evenodd"
+              />
+            </svg>
+          </button>
+        </div>
+        {/* Responsive Nav */}
       </div>
     </nav>
   );

@@ -4,18 +4,18 @@ import Logo from "../assets/logo.png";
 
 const NavbarContent = () => {
   return (
-    <nav className="flex justify-center items-center fixed w-full h-[60px] text-[#1f2937] z-[999]">
+    <nav className="flex justify-center bg-white  items-center fixed w-full h-[60px]  text-[#1f2937] z-[999]">
       <div className="flex justify-between w-full max-w-[1350px] h-full relative">
         <div className="flex items-center gap-[15px] pl-[35px] pr-[49px] w-[289px]">
           <Link className="flex w-full h-full bg-white" to={"/"}>
             <div className="flex items-center gap-[9.5px]">
-              <img src={Logo} className="w-[50px]" alt="" />
+              {/* <img src={Logo} className="w-[50px]" alt="" /> */}
               <p className="text-[16px] text-logo font-bold">LUNA UI</p>
             </div>
           </Link>
         </div>
         {/* Kanan */}
-        <div className="flex items-center gap-[10px] flex-grow pl-[19px] h-[60px]">
+        <div className="lg:flex hidden items-center gap-[10px] flex-grow pl-[19px] h-[60px]">
           <div className="flex items-center justify-between  w-full h-full bg-white bg-opacity-50 backdrop-blur-sm px-5">
             <div className="h-[35px] bg-white shadow-md border border-gray-200 text-[#1f2937] w-[160px] rounded flex justify-around items-center">
               <svg

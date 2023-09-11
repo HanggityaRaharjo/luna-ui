@@ -33,7 +33,7 @@ const Colors = () => {
           <p className="font-semibold text-lg mb-2">
             <span className="text-[#939399]">#</span> Example
           </p>
-          <div className="grid grid-cols-3">
+          <div className="grid lg:grid-cols-3 grid-cols-2">
             <ul className="text-[#1f2937cc] list-disc">
               <li className="flex items-center gap-5 ">
                 -<div className="w-4 h-4 bg-red-500 rounded-full"></div>

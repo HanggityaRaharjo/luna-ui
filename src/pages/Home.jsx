@@ -25,12 +25,12 @@ function Card({ txtColor, bgColor, label, icon, image }) {
 
 function OtherCard(props) {
   return (
-    <div className="bg-white flex justify-center items-center h-[150px] border border-gray-200 rounded-md hover:shadow-md ">
+    <div className="bg-white bg-opacity-50 backdrop-blur-sm flex justify-center items-center h-[150px] border border-gray-200 rounded-md hover:shadow-md ">
       <div>
         <div className="flex justify-center">
           <img src={props.image} alt="" className="h-10" />
         </div>
-        <span>{props.span}</span>
+        <p className="text-center">{props.span}</p>
       </div>
     </div>
   );
@@ -43,21 +43,20 @@ export const Home = () => {
   });
 
   return (
-    <Layout className="home">
-      <div className="mt-20 mb-[80px] flex justify-between items-center">
+    <Layout>
+      <div className="lg:mt-20 lg:mb-[80px] mb-10 flex justify-between items-center ">
         {/* Kiri */}
-        <div className="w-1/2" style={{ lineHeight: 1 }}>
+        <div
+          className="lg:w-1/2 w-full relative  lg:block flex flex-col justify-center items-center"
+          style={{ lineHeight: 1 }}
+        >
           <p className="text-logo text-[64px] font-bold">LUNA UI</p>
-          <p className="font-56 text-[64px] font-semibold">Component UI</p>
-          <p
-            className="font-56 text-[64px] font-semibold"
-            style={{ marginBottom: "1.5rem" }}
-          >
-            {" "}
-            For TailwindCSS
-          </p>
+          <div className="lg:text-[64px] text-[40px] mb-5">
+            <p className="">Component UI</p>
+            <p className="lg:mb-6">For TailwindCSS</p>
+          </div>
 
-          <p className="fw-700 text-[20px] text-[#9999a0] mb-12">
+          <p className="fw-700 lg:text-[20px] text-[#9999a0] lg:mb-12 mb-5">
             Copy the code & paste it to your project
           </p>
 
@@ -68,12 +67,11 @@ export const Home = () => {
             >
               Get Started
             </Link>
-            <Link className="btn flex items-center">Theme</Link>
           </div>
         </div>
 
         {/* Kanan */}
-        <div className="w-1/2 relative flex justify-center items-center">
+        <div className="lg:w-1/2 relative lg:flex justify-center items-center hidden">
           <div
             className="blur-[56px] bg-gradient-to-tl from-[#bd34fe] from-50% to-[#47caff] to-50% absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 rounded-full w-80 h-80"
             style={{
@@ -81,21 +79,36 @@ export const Home = () => {
               left: `calc(50% - ${countScroll / 2}px)`,
             }}
           ></div>
-          <img src={Logo} height={"180px"} alt="" className="relative" />
+          {/* <img src={Logo} height={"180px"} alt="" className="relative" /> */}
+          <p className="text-logo text-[80px] text-red-500 font-bold relative ">
+            LUNA UI
+          </p>
         </div>
       </div>
 
-      <div className="grid grid-cols-3 gap-4 relative">
+      <div className="grid lg:grid-cols-3 grid-cols-1  gap-4 relative mb-10">
         <Card
           bgColor={"bg-gray-200"}
           txtColor={"text-black"}
           image={"icon/easy-icon.svg"}
           label={
             <>
-              <p className="font-semibold">Easy to use</p>
+              <p className="font-semibold">semantic class names</p>
               <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
+                It's descriptive, faster, cleaner and easier to maintain.
+              </p>
+            </>
+          }
+        />
+        <Card
+          bgColor={"bg-gray-200"}
+          txtColor={"text-black"}
+          image={"icon/easy-icon.svg"}
+          label={
+            <>
+              <p className="font-semibold">Free and open-source</p>
+              <p className="text-[13px]">
+                This is free and don't forget to star me on github.
               </p>
             </>
           }
@@ -108,81 +121,28 @@ export const Home = () => {
             <>
               <p className="font-semibold">Easy to use</p>
               <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
-              </p>
-            </>
-          }
-        />
-        <Card
-          bgColor={"bg-gray-200"}
-          txtColor={"text-black"}
-          image={"icon/easy-icon.svg"}
-          label={
-            <>
-              <p className="font-semibold">Easy to use</p>
-              <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
-              </p>
-            </>
-          }
-        />
-        <Card
-          bgColor={"bg-gray-200"}
-          txtColor={"text-black"}
-          image={"icon/easy-icon.svg"}
-          label={
-            <>
-              <p className="font-semibold">Easy to use</p>
-              <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
-              </p>
-            </>
-          }
-        />
-        <Card
-          bgColor={"bg-gray-200"}
-          txtColor={"text-black"}
-          image={"icon/easy-icon.svg"}
-          label={
-            <>
-              <p className="font-semibold">Easy to use</p>
-              <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
-              </p>
-            </>
-          }
-        />
-        <Card
-          bgColor={"bg-gray-200"}
-          txtColor={"text-black"}
-          image={"icon/easy-icon.svg"}
-          label={
-            <>
-              <p className="font-semibold">Easy to use</p>
-              <p className="text-[13px]">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt
-                inventore .
+                Just copy the code and build your project faster
               </p>
             </>
           }
         />
       </div>
 
-      <div className=" relative">
-        <div className="my-14">
-          <div className="text-[32px] font-bold">Tailwinds CSS Components</div>
-          <p className="pt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi optio
-            molestiae voluptas tempore cumque sunt, quos quae. Eum, alias iure.
+      <div className="relative mb-10">
+        <div>
+          <div className="text-[32px] font-bold mb-5">
+            Tailwinds CSS Components
+          </div>
+          <p className="mb-5">
+            As we know tailwind make developer easy to styling element because
+            their utility first class,but tailwind make the code so many long
+            text codes ,luna makes you to build design faster and semantic class
+            names
           </p>
         </div>
         {/* card */}
         {/* Alert */}
-        <div className="grid grid-cols-3 gap-1 mb-1">
+        <div className="grid lg:grid-cols-3 grid-cols-2 gap-1 mb-1">
           <div className="hover:shadow-md bg-white rounded-md bg-opacity-40 backdrop-blur-sm">
             <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
               <h3 className="px-2">Alert</h3>
@@ -407,30 +367,25 @@ export const Home = () => {
         </div>
       </div>
 
-      <div className=" rounded-2xl relative mt-32 ">
-        <div className="flex justify-center items-center mb-1 h-[50px]">
+      <div className=" rounded-2xl relative ">
+        <div className="flex justify-center items-center">
           <div>
-            <h2 className="text-[32px] font-bold text-center">
+            <h2 className="text-[32px] font-bold text-center mb-5">
               Luna in other technologies
             </h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
-              doloremque velit aliquid ratione tenetur doloribus sit, quae
-              soluta inventore voluptatibus!
-            </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 mt-10">
-          <OtherCard image={laravel} span="Luna React" />
-          <OtherCard image={react} span="Luna React" />
-          <OtherCard image={vite} span="Luna React" />
-          <OtherCard image={next} span="Luna React" />
-          <OtherCard image={nuxt} span="Luna React" />
-          <OtherCard image={django} span="Luna React" />
+        <div className="grid grid-cols-3 gap-2 mb-5">
+          <OtherCard image={laravel} span="Laravel" />
+          <OtherCard image={react} span="React" />
+          <OtherCard image={vite} span="Vue" />
+          <OtherCard image={next} span="NextJS" />
+          <OtherCard image={nuxt} span="NuxtJS" />
+          <OtherCard image={django} span="Django" />
         </div>
 
-        <div
+        {/* <div
           className="bg-gray-200 d-flex justify-content-center align-items-center  my-[50px]"
           style={{ marginBottom: "4px", height: "50px" }}
         >
@@ -514,11 +469,12 @@ export const Home = () => {
           >
             2
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="flex justify-center relative gap-5">
-        <button className="btn-outline-wn">Sponsore Me</button>
-        <button className="btn-outline-wn">Buy Me a coffee</button>
+        <button className="btn">Sponsore Me</button>
+        <button className="btn">Buy Me a coffee</button>
+        <button className="btn">Join For Contribute</button>
       </div>
     </Layout>
   );

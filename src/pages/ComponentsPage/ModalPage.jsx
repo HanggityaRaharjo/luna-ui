@@ -3,7 +3,7 @@ import LayoutContent from "../../LayoutContent";
 import ViewComponent from "../../components/ViewComponent";
 import CodeSnippet from "../../components/CodeSnippet";
 
-const NavbarPage = () => {
+const ModalPage = () => {
   return (
     <LayoutContent>
       {/* Title */}
@@ -120,4 +120,4 @@ const NavbarPage = () => {
   );
 };
 
-export default NavbarPage;
+export default ModalPage;

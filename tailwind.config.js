@@ -1,10 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
-import myPlugin from "./lunaui";
-import plugin from "tailwindcss/plugin";
+import plugin from "./lunaui"; // Import your custom plugin
 
 export const content = ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"];
 export const theme = {
   extend: {},
 };
-export const plugins = [myPlugin];
+export const plugins = [plugin]; // Include your custom plugin in the plugins array

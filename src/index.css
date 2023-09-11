@@ -1,8 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
+/*
 :root {
   --neutral: 30, 31, 56;
   --default: 30, 31, 56;
@@ -23,13 +22,34 @@
   --content-success: rgb(23, 44, 30);
   --content-warning: rgb(46, 38, 20);
   --content-error: rgb(255, 220, 214);
+}*/
+/*
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
 }
+*/
+/*
 .btn {
   --btn-color: #fff;
   --btn-bg: rgb(var(--default));
   --btn-border-color: rgb(var(--default));
   --btn-hover-bg: rgba(var(--default), 0.5);
   --btn-hover-border-color: rgb(var(--default));
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   border-width: 1px;
   border-color: var(--btn-border-color);
@@ -44,12 +64,14 @@
   line-height: 1.25rem;
   transition:
     background,
+    transform,
     border 0.2s;
   color: var(--btn-color);
   padding-left: 1.25rem;
   padding-right: 1.25rem;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+  gap: 5px;
 }
 .btn:hover {
   background-color: var(--btn-hover-bg);
@@ -57,10 +79,10 @@
   border-color: transparent;
 }
 .btn:active {
-  transform: scale(90%);
+  transform: scale(95%);
   transition:
     background,
-    transform 0.2s;
+    transform 0.5s;
 }
 .btn-primary {
   --btn-color: var(--content-primary);
@@ -146,9 +168,9 @@
 }
 .btn-wide {
   min-width: 16rem;
-}
+}*/
 /* Card */
-.card {
+/*.card {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -202,12 +224,17 @@ pre {
   align-items: flex-start;
   gap: 0.5rem;
 }
+*/
 /* End Card */
 /*   Badge */
+/*
 .badge {
   --badge-color: #fff;
   --badge-bg: transparent;
   --badge-border-color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   text-transform: uppercase;
   border-width: 1px;
   height: -moz-fit-content;
@@ -270,10 +297,10 @@ pre {
   border-color: var(--badge-bg);
   background-color: transparent;
   color: var(--badge-bg);
-}
+}*/
 
 /* Alert */
-.alert {
+/* .alert {
   --luna-alert-text-color: #fff;
   --luna-alert-bg-color: transparent;
   --luna-alert-border-color: #fff;
@@ -291,7 +318,9 @@ pre {
   color: var(--luna-alert-text-color);
   background-color: var(--luna-alert-bg-color);
 }
+*/
 
+/*
 .alert-info {
   --luna-alert-text-color: var(--content-info);
   --luna-alert-bg-color: rgb(var(--info));
@@ -312,9 +341,11 @@ pre {
   --luna-alert-bg-color: rgb(var(--error));
   --luna-alert-border-color: rgb(var(--error));
 }
+*/
 /* End Alert */
 
 /* Navbar */
+/*
 .navbar {
   display: flex;
   align-items: center;
@@ -322,9 +353,11 @@ pre {
   min-height: 4rem;
   width: 100%;
 }
+*/
 /* End Navbar */
 
 /* Toggle */
+/* 
 .toggle {
   flex-shrink: 0;
   --tglbg: white;
@@ -414,36 +447,502 @@ pre {
   --dottogglecolor: rgb(var(--error));
   --togglebordercolor: rgb(var(--error));
 }
-
+*/
 /* End Toggle */
 
 /* progress */
-.progress {
-  position: relative;
-  width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  overflow: hidden;
-  height: 0.5rem;
-  background-color: red;
-  border-radius: 1rem;
-  vertical-align: baseline;
-}
 
+/* Ganti warna nilai (fill) progress untuk browser Firefox */
+
+/* Ganti dengan warna fill yang Anda inginkan */
 /*
-.progress {
-  position: relative;
-  accent-color: red;
-  width: 100%;
+progress::-webkit-progress-bar {
+  background-color: #d7dce1; 
+}
+*/
+/* Reset Progress */
+/* Ganti warna latar belakang progress */
+/* 
+progress.progress {
+  background-color: red;
+  min-width: 100px;
+  height: 8px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+*/
+/* Ganti warna nilai (fill) progress untuk browser berbasis WebKit (seperti Chrome) */
+/*
+progress.progress::-webkit-progress-value {
+  --pgbg: var(--default);
+  background-color: rgba(var(--pgbg), 1);
+  border-radius: 100px;
+}
+*/
+/* Progress Primary */
+/*
+progress.progress-primary::-webkit-progress-value {
+  --pgbg: var(--primary);
+}
+ */
+/* Progress Secondary */
+/*
+progress.progress-secondary::-webkit-progress-value {
+  --pgbg: var(--secondary);
+}
+ */
+/* Progress Accent */
+/*
+progress.progress-accent::-webkit-progress-value {
+  --pgbg: var(--accent);
+}
+ */
+/* Progress Success */
+/*
+progress.progress-success::-webkit-progress-value {
+  --pgbg: var(--success);
+}
+ */
+/* Progress Info */
+/*
+progress.progress-info::-webkit-progress-value {
+  --pgbg: var(--info);
+}
+ */
+/* Progress Warning */
+/*
+progress.progress-warning::-webkit-progress-value {
+  --pgbg: var(--warning);
+}
+ */
+/* Progress Error */
+/*
+progress.progress-error::-webkit-progress-value {
+  --pgbg: var(--error);
+}
+ */
+
+/* ------------------------- Select -------------------------------------- */
+/*
+.select {
+  --select-border-opacity: 1;
+  --select-border-width: 0px;
+  --select-border-color: transparent;
+  --select-bg: transparent;
+  display: inline-flex;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  overflow: hidden;
-  height: 0.5rem;
-  background-color: red;
-  border-radius: var(--rounded-box, 1rem);
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 2.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 2;
+  min-height: 3rem;
+  border-width: var(--select-border-width);
+  border-color: var(--select-border-color);
+  background-color: var(--select-bg);
+  border-radius: 0.5rem;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) calc(1px + 50%),
+    calc(100% - 16.1px) calc(1px + 50%);
+  background-size:
+    4px 4px,
+    4px 4px;
+  background-repeat: no-repeat;
 }
 
+.select:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(0, 0, 0, 0.2);
+}
+
+.select-bordered {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: gray;
+  --select-bg: transparent;
+}
+
+.select-primary {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--primary));
+  --select-bg: transparent;
+}
+
+.select.select-primary:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--primary), 0.2);
+}
+.select-secondary {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--secondary));
+  --select-bg: transparent;
+}
+.select.select-secondary:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--secondary), 0.2);
+}
+.select-accent {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--accent));
+  --select-bg: transparent;
+}
+.select.select-accent:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--accent), 0.2);
+}
+.select-info {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--info));
+  --select-bg: transparent;
+}
+.select.select-info:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--info), 0.2);
+}
+.select-success {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--success));
+  --select-bg: transparent;
+}
+.select.select-success:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--success), 0.2);
+}
+.select-warning {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--warning));
+  --select-bg: transparent;
+}
+.select.select-warning:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--warning), 0.2);
+}
+.select-error {
+  --select-border-opacity: 1;
+  --select-border-width: 1px;
+  --select-border-color: rgb(var(--error));
+  --select-bg: transparent;
+}
+.select.select-error:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--error), 0.2);
+}
+
+*/
+/* Select Color */
+/* End Select Color */
+/*  ------------------------- End Select -------------------------------------- */
+
+/*  ------------------------- Dropdown -------------------------------------- */
+/* Gaya untuk elemen <details> */
+/* 
+details.dropdown {
+  cursor: pointer;
+  position: relative;
+}
+*/
+
+/* Gaya untuk elemen <summary> */
+/*
+summary {
+  outline: none; 
+  list-style: none; 
+}
+*/
+
+/* Gaya konten dropdown */
+/*
+details.dropdown > div.content-dropdown {
+  position: absolute;
+  bottom: -110px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 10px;
+  min-width: 200px;
+}
+*/
+
+/*  ------------------------- End Dropdown -------------------------------------- */
+
+/*  -------------------------  Table -------------------------------------- */
+/*
+table.table {
+  --bg-table: 255, 255, 255;
+  background-color: rgba(var(--bg-table), 1);
+  border-radius: 10px;
+}
+
+table.table thead tr th {
+  border-bottom: 1px solid rgb(229 231 235);
+  padding: 10px;
+  color: gray;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+table.table tbody tr th,
+table.table tbody tr td {
+  border-bottom: 1px solid rgb(229 231 235);
+  padding: 10px;
+}
+table.table tbody tr:last-child td,
+table.table tbody tr:last-child th {
+  border-bottom: none;
+}
+*/
+
+/* Table Hover */
+/*
+table.table.table-hovered tbody tr:hover {
+  background: #e2e8f4;
+  transition: background 0.3s;
+}
+*/
+/* End Table Hover */
+
+/* Table Hover */
+/* 
+table.table.table-zebra tbody tr:nth-child(even) {
+  background: #f0f6ff;
+}
+*/
+/* End Table Hover */
+/*  ------------------------- End Table -------------------------------------- */
+/*  ------------------------- Hero -------------------------------------- */
+/*
+.hero {
+  --bg-hero: 255, 255, 255;
+  display: grid;
+  place-items: center;
+  border-radius: 0.375rem;
+  background-color: rgba(var(--bg-hero));
+}
+.hero-overlay {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  height: 100%;
+  width: 100%;
+  --bg-hero: 0, 0, 0;
+  background-color: rgba(var(--bg-hero), 0.5);
+  border: 1px solid green;
+}
+
+.hero-content {
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 80rem;
+  gap: 1rem;
+  padding: 1rem;
+}
+*
+/*  ------------------------- End Hero -------------------------------------- */
+/*  ------------------------- Footer -------------------------------------- */
+/*
+@media (min-width: 48rem) .footer {
+  grid-auto-flow: column;
+}
+.footer {
+  display: grid;
+  width: 100%;
+  grid-auto-flow: column;
+  place-items: start;
+  row-gap: 2.5rem;
+  column-gap: 1rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.footer > * {
+  display: grid;
+  place-items: start;
+  gap: 0.5rem;
+}
+.footer-title {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+*/
+/*  ------------------------- End Footer -------------------------------------- */
+/*  ------------------------- Text Input -------------------------------------- */
+/*
+.input {
+  --border-color: 255, 255, 255;
+  --border-opacity: 0;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+  flex-shrink: 1;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 2;
+  line-height: 1.5rem;
+  border-width: var(--border-width);
+  border-color: rgba(var(--border-color), var(--border-opacity));
+  background-color: rgba(var(--input-bg-default), var(--input-bg-opacity));
+  border-radius: 0.5rem;
+}
+.input:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(0, 0, 0, 0.2);
+}
+.input.input-bordered {
+  --border-color: 0, 0, 0;
+  --border-opacity: 0.2;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+*/
+/*  ---------------- Primary---------------------------- */
+/*
+.input.input-bordered.input-primary {
+  --border-color: var(--primary);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-primary:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--primary), 0.2);
+}
+*/
+/*  ---------------- secondary---------------------------- */
+/*
+.input.input-bordered.input-secondary {
+  --border-color: var(--secondary);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-secondary:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--secondary), 0.2);
+}
  */
-/* End progress */
+/*  ---------------- accent---------------------------- */
+/*
+.input.input-bordered.input-accent {
+  --border-color: var(--accent);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-accent:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--accent), 0.2);
+}
+*/
+/*  ---------------- info---------------------------- */
+/*
+.input.input-bordered.input-info {
+  --border-color: var(--info);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-info:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--info), 0.2);
+}
+*/
+/*  ---------------- success---------------------------- */
+/* 
+.input.input-bordered.input-success {
+  --border-color: var(--success);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-success:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--success), 0.2);
+}
+*/
+/*  ---------------- warning---------------------------- */
+/*
+.input.input-bordered.input-warning {
+  --border-color: var(--warning);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-warning:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--warning), 0.2);
+}
+*/
+/*  ---------------- error---------------------------- */
+/*
+.input.input-bordered.input-error {
+  --border-color: var(--error);
+  --border-opacity: 1;
+  --border-width: 1px;
+  --input-bg-default: 255, 255, 255;
+  --input-bg-opacity: 1;
+}
+.input.input-bordered.input-error:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgba(var(--error), 0.2);
+}
+*/
+/*  ------------------------- End Text Input -------------------------------------- */

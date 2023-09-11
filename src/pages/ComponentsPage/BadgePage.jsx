@@ -8,7 +8,7 @@ const ButtonPage = () => {
     <LayoutContent>
       {/* Title */}
       <div className=" relative border-b-2 border-gray-200 mb-4 py-2 group">
-        <div className="absolute -left-12 text-transparent group-hover:text-[#646cff] transition-all duration-300">
+        <div className="absolute -left-8  text-transparent group-hover:text-[#646cff] transition-all duration-300">
           <span className="text-5xl">#</span>
         </div>
         <h2 className="text-[30px] font-bold ">Badge</h2>
@@ -57,6 +57,7 @@ const ButtonPage = () => {
         />
       </section>
       {/* End Badge State*/}
+
       {/* Badge Outline*/}
       <section className="mb-4">
         <p className="font-semibold text-lg mb-2">
@@ -86,6 +87,36 @@ const ButtonPage = () => {
         />
       </section>
       {/* End Badge Outline*/}
+
+      {/* Badge In Button*/}
+      <section className="mb-4">
+        <p className="font-semibold text-lg mb-2">
+          <span className="text-[#939399]">#</span>Badge In Button
+        </p>
+        <ViewComponent>
+          <button className="btn">
+            Inbox
+            <div className="badge">+99</div>
+          </button>
+          <button className="btn">
+            Inbox
+            <div className="badge badge-error">+99</div>
+          </button>
+        </ViewComponent>
+        <CodeSnippet
+          type="html"
+          code={`<button className="btn">
+  Inbox
+  <div className="badge">+99</div>
+</button>
+<button className="btn">
+  Inbox
+  <div className="badge badge-error">+99</div>
+</button>
+`}
+        />
+      </section>
+      {/* End Badge In Button*/}
     </LayoutContent>
   );
 };

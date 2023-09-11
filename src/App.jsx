@@ -10,6 +10,11 @@ import {
   TogglePage,
   ProgressPage,
   SelectPage,
+  DropdownPage,
+  TablePage,
+  HeroPage,
+  FooterPage,
+  TextInputPage,
 } from "./pages/ComponentsPage";
 import { IntallPage, ContentDeliveryNetwork, Colors } from "./pages/docs";
 import About from "./pages/About/About";
@@ -63,6 +68,26 @@ const router = createBrowserRouter([
   {
     path: "/components/select",
     element: <SelectPage />,
+  },
+  {
+    path: "/components/dropdown",
+    element: <DropdownPage />,
+  },
+  {
+    path: "/components/table",
+    element: <TablePage />,
+  },
+  {
+    path: "/components/hero",
+    element: <HeroPage />,
+  },
+  {
+    path: "/components/footer",
+    element: <FooterPage />,
+  },
+  {
+    path: "/components/text-input",
+    element: <TextInputPage />,
   },
   {
     path: "/about",

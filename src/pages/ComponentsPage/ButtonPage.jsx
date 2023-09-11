@@ -8,7 +8,7 @@ const ButtonPage = () => {
     <LayoutContent>
       {/* Title */}
       <div className=" relative border-b-2 border-gray-200 mb-4 py-2 group ">
-        <div className="absolute -left-12 text-transparent group-hover:text-[#646cff] transition-all duration-300">
+        <div className="absolute -left-8 text-transparent group-hover:text-[#646cff] transition-all duration-300">
           <span className="text-5xl">#</span>
         </div>
         <h2 className="text-[30px] font-bold ">Buttons</h2>

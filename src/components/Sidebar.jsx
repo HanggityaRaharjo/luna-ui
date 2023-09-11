@@ -7,13 +7,10 @@ const Sidebar = () => {
   const [stateUrl, setStateUrl] = useState(url);
 
   return (
-    <div
-      style={{ width: "20%" }}
-      id="element-testing"
-      className="text-[#1f2937]"
-    >
+    <div id="element-testing" className="text-[#1f2937] lg:w-[20%]">
       <div
-        className="fixed"
+        id="sidebar-menu"
+        className="fixed hidden lg:block"
         style={{
           width: "272px",
           height: "100vh",
@@ -51,13 +48,13 @@ const Sidebar = () => {
               />
             </svg>
 
-            <span className="font-semibold">Guide</span>
+            <span className="font-bold opacity-50">Guide</span>
           </div>
           <Link to={"/docs/install"} className="">
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
-                stateUrl == "/docs/install"
-                  ? "bg-neutral text-white"
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/docs/install" || stateUrl == "/docs/cdn"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -66,19 +63,64 @@ const Sidebar = () => {
           </Link>
           <Link to={"/docs/color"} className="">
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/docs/color"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
-              <span> Colors </span>
+              <span className=""> Colors </span>
             </div>
           </Link>
 
           {/* Divider */}
           <div
-            className="mb-3 border-b-2 border-gray-200"
+            className="mb-3 border-b border-gray-200"
+            style={{ marginRight: "50px" }}
+          ></div>
+          {/* End Divider */}
+
+          <div className="flex items-center gap-2 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6  text-primary "
+            >
+              <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+              <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+            </svg>
+
+            <span className="font-bold opacity-50">Layout</span>
+          </div>
+
+          <Link to={"/components/hero"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/hero"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Hero </span>
+            </div>
+          </Link>
+
+          <Link to={"/components/footer"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/footer"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Footer </span>
+            </div>
+          </Link>
+
+          {/* Divider */}
+          <div
+            className="mb-3 border-b border-gray-200"
             style={{ marginRight: "50px" }}
           ></div>
           {/* End Divider */}
@@ -92,14 +134,14 @@ const Sidebar = () => {
               />
             </svg>
 
-            <span className="font-semibold">Components</span>
+            <span className="font-bold opacity-50">Components</span>
           </div>
 
           <Link to={"/components/navbar"} className="">
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/navbar"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -109,9 +151,9 @@ const Sidebar = () => {
 
           <Link to={"/components/alert"} className="">
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/alert"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -120,9 +162,9 @@ const Sidebar = () => {
           </Link>
           <Link to={"/components/badge"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/badge"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -131,9 +173,9 @@ const Sidebar = () => {
           </Link>
           <Link to={"/components/button"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/button"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -143,9 +185,9 @@ const Sidebar = () => {
 
           <Link to={"/components/card"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/card"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -153,23 +195,93 @@ const Sidebar = () => {
             </div>
           </Link>
 
-          <Link to={"/components/toggle"}>
+          <Link to={"/components/progress"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
-                stateUrl == "/components/toggle"
-                  ? "bg-neutral text-white"
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/progress"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
-              <span> Toggle </span>
+              <span> Progress </span>
+            </div>
+          </Link>
+
+          <Link to={"/components/dropdown"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/dropdown"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Dropdown </span>
+            </div>
+          </Link>
+
+          <Link to={"/components/table"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/table"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Table </span>
+            </div>
+          </Link>
+
+          <Link to={"/components/table"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/modal"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Modal </span>
+              <span className="badge badge-primary">Cooming Soon</span>
+            </div>
+          </Link>
+
+          {/* Divider */}
+          <div
+            className="mb-3 border-b border-gray-200"
+            style={{ marginRight: "50px" }}
+          ></div>
+          {/* End Divider */}
+
+          <div className="flex items-center gap-2 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className="w-6 h-6  text-primary "
+            >
+              <path d="M21.731 2.269a2.625 2.625 0 00-3.712 0l-1.157 1.157 3.712 3.712 1.157-1.157a2.625 2.625 0 000-3.712zM19.513 8.199l-3.712-3.712-8.4 8.4a5.25 5.25 0 00-1.32 2.214l-.8 2.685a.75.75 0 00.933.933l2.685-.8a5.25 5.25 0 002.214-1.32l8.4-8.4z" />
+              <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
+            </svg>
+
+            <span className="font-semibold">Data Input</span>
+          </div>
+
+          <Link to={"/components/text-input"}>
+            <div
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/text-input"
+                  ? "bg-neutral text-white hover:bg-neutral "
+                  : "bg-transparent"
+              }`}
+            >
+              <span> Text Input </span>
             </div>
           </Link>
 
           <Link to={"/components/select"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/select"
-                  ? "bg-neutral text-white"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
@@ -177,15 +289,15 @@ const Sidebar = () => {
             </div>
           </Link>
 
-          <Link to={"/components/progress"}>
+          <Link to={"/components/toggle"}>
             <div
-              className={`mb-3 w-56 rounded-lg p-2 hover:bg-neutral transition duration-300 hover:text-white ${
-                stateUrl == "/components/progress"
-                  ? "bg-neutral text-white"
+              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+                stateUrl == "/components/toggle"
+                  ? "bg-neutral text-white hover:bg-neutral "
                   : "bg-transparent"
               }`}
             >
-              <span> Progress </span>
+              <span> Toggle </span>
             </div>
           </Link>
         </div>
