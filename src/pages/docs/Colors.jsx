@@ -7,7 +7,7 @@ const Colors = () => {
   return (
     <LayoutContent>
       {/* Title */}
-      <div className=" relative border-b-2 border-gray-200 mb-4 py-2 group ">
+      <div className=" relative neu rounded-md px-2 border-b-2 border-gray-200 mb-4 py-2 group ">
         <div className="absolute -left-12 text-transparent group-hover:text-[#646cff] transition-all duration-300">
           <span className="text-5xl">#</span>
         </div>
@@ -15,21 +15,23 @@ const Colors = () => {
       </div>
       {/* End Title */}
       <section className="text-[#1f2937cc]">
-        <div className="alert alert-info mb-4">
-          <svg className="w-6 h-6 fill-transparent stroke-current stroke-2">
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
-            />
-          </svg>
-          <span className="font-semibold uppercase">
-            as we know to call a color class in tailwindcss using color with 11
-            steps from value 50 - 950.
-          </span>
+        <div className=" mb-4 p-2 neu rounded-md">
+          <div className="alert alert-info">
+            <svg className="w-6 h-6 fill-transparent stroke-current stroke-2">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+              />
+            </svg>
+            <span className="font-semibold uppercase">
+              as we know to call a color class in tailwindcss using color with
+              11 steps from value 50 - 950.
+            </span>
+          </div>
         </div>
 
-        <div className="mb-4">
+        <div className="mb-4 rounded-md p-2 neu">
           <p className="font-semibold text-lg mb-2">
             <span className="text-[#939399]">#</span> Example
           </p>
@@ -75,7 +77,7 @@ const Colors = () => {
           </div>
         </div>
       </section>
-      <section className="text-[#1f2937cc] mb-5">
+      <section className="text-[#1f2937cc] mb-5 neu rounded-md p-2">
         <p className="font-semibold text-lg mb-2">
           <span className="text-[#939399]">#</span> Background Color
         </p>
@@ -114,7 +116,7 @@ const Colors = () => {
           </li>
         </ul>
       </section>
-      <section className="text-[#1f2937cc] mb-5">
+      <section className="text-[#1f2937cc] mb-5 neu rounded-md p-2">
         <p className="font-semibold text-lg mb-2">
           <span className="text-[#939399]">#</span> Text Color
         </p>

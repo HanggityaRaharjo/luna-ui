@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
         isSidebarShow={isSidebarShow}
         setIsSidebarShow={setIsSidebarShow}
       />
-      <main className="bg-white min-h-screen p-5 text-[#1f2937] lg:p-[100px] pt-[70px] flex justify-center">
+      <main className="bg-[#e9edf0] min-h-screen p-5 text-[#1f2937] lg:p-[100px] pt-[70px] flex justify-center">
         <div className="max-w-[1280px] w-full">{children}</div>
       </main>
       <Footer />

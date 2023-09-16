@@ -27,17 +27,44 @@ export const button = {
     "padding-top": "0.625rem",
     "padding-bottom": "0.625rem",
     gap: "5px",
+    position: "relative",
+    overflow: "hidden",
+  },
+
+  ".btn::before": {
+    position: "absolute",
+    left: "50%",
+    transform: "translateX(-50%)",
+    height: "0px",
+    background: "rgba(0, 0, 0, 0.05)",
+    width: "0px",
+    content: "",
+  },
+  ".btn:active::before": {
+    height: "101%",
+    background: `rgba(0, 0, 0, 0.05)`,
+    width: `101%`,
+    "animation-name": `waves-effect`,
+    "animation-duration": `0.1s`,
+  },
+  "@keyframes waves-effect": {
+    "0%": {
+      height: "0%",
+      background: `rgba(0, 0, 0, 0)`,
+      width: `0%`,
+    },
+    "100%": {
+      height: `101%`,
+      background: `rgba(0, 0, 0, 0.05)`,
+      width: `101%`,
+    },
   },
   ".btn:hover": {
     "background-color": "var(--btn-hover-bg)",
     transition: "background 0.3s",
     "border-color": "transparent",
   },
-  ".btn:active": {
-    transform: "scale(95%)",
-    transition: `background,
-      transform 0.5s`,
-  },
+
   ".btn-primary": {
     "--btn-color": "var(--content-primary)",
     "--btn-bg": "rgb(var(--primary))",

@@ -10,17 +10,17 @@ const Navbar = ({ isSidebarShow, setIsSidebarShow }) => {
   return (
     <nav
       id={`${navbarBg ? "navbar-true" : "navbar-false"}`}
-      className="h-[60px] top-0 flex justify-center items-center w-full fixed  text-[#1f2937] z-[999] px-5"
+      className="h-[60px] top-0 flex justify-center items-center w-full fixed  z-[999] px-5"
     >
       <div className="justify-between flex  max-w-[1280px] h-full w-full">
         <div className="flex items-center gap-[15px]">
           <Link to={"/"}>
             <div className="items-center  flex gap-[10px]">
               {/* <img src={Logo} width={"50px"} alt="" /> */}
-              <p className="text-[16px] text-logo font-bold">LUNA UI</p>
+              <p className=" text-primary px-2 font-bold">LUNA UI</p>
             </div>
           </Link>
-          <div className="h-[35px] bg-white shadow-md border border-gray-200 text-[#1f2937] w-[160px] rounded lg:flex hidden justify-around items-center">
+          <div className="neu-input rounded-full h-[40px] w-[250px] lg:flex hidden px-2 gap-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -29,6 +29,7 @@ const Navbar = ({ isSidebarShow, setIsSidebarShow }) => {
               stroke="currentColor"
               width={"20px"}
               height={"20px"}
+              className="text-gray-500"
             >
               <path
                 strokeLinecap="round"
@@ -36,27 +37,29 @@ const Navbar = ({ isSidebarShow, setIsSidebarShow }) => {
                 d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
               />
             </svg>
-
-            <p className="text-[14px]">Search</p>
-            <p className="rounded-[5px] px-[5px] border">CTRLK</p>
+            <span className=" text-gray-500">Search</span>
           </div>
         </div>
         <div className="gap-[10px] lg:flex hidden items-center ">
-          <div
-            className="gap-[10px] px-[16px] flex items-center"
-            style={{
-              borderRight: "2px solid #9999a0",
-            }}
-          >
-            <Link to={"/docs/install"} className="text-[16px]">
+          <div className="gap-[10px] px-[16px] flex items-center">
+            <Link
+              to={"/docs/install"}
+              className="text-[16px] text-primary font-semibold neu rounded-md p-2"
+            >
               Documentation
             </Link>
-            <p className="text-[16px]">Guide</p>
-            <p className="text-[16px]">Config</p>
-            <p className="text-[16px]">Version 1.0.0</p>
+            <p className="text-[16px] text-primary font-semibold neu rounded-md p-2">
+              Guide
+            </p>
+            <p className="text-[16px] text-primary font-semibold neu rounded-md p-2">
+              Config
+            </p>
+            <p className="text-[16px] text-primary font-semibold neu rounded-md p-2">
+              Version 1.0.0
+            </p>
           </div>
           <div className="flex items-center gap-2 ">
-            <a href="">
+            <a href="" className="neu p-2 rounded-md">
               <svg
                 width="25px"
                 height="25px"
@@ -116,10 +119,10 @@ const Navbar = ({ isSidebarShow, setIsSidebarShow }) => {
                 </g>
               </svg>
             </a>
-            <a href="">
+            <a href="" className="neu p-2 rounded-md">
               <svg
-                width="19px"
-                height="19px"
+                width="25px"
+                height="25px"
                 viewBox="0 0 20 20"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"

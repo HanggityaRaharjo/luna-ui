@@ -2,7 +2,7 @@ export const base = {
   ":root": {
     "--neutral": "30, 31, 56",
     "--default": "30, 31, 56",
-    "--primary": "60, 114, 168",
+    "--primary": "2, 140, 200",
     "--secondary": "226, 255, 175",
     "--accent": "247, 188, 51",
     "--light": "252, 252, 253",

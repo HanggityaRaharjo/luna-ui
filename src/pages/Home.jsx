@@ -11,11 +11,9 @@ import nuxt from "../assets/nuxt.svg";
 
 function Card({ txtColor, bgColor, label, icon, image }) {
   return (
-    <div
-      className={` ${bgColor} ${txtColor} rounded-lg p-4 bg-opacity-50 backdrop-blur-sm`}
-    >
+    <div className={`neu text-[#293948] rounded-md p-5`}>
       {icon}
-      <div className="bg-dk rounded-lg mb-2 h-10 w-10 p-[2px]">
+      <div className=" rounded-lg mb-2 h-10 w-10 p-[2px]">
         <img src={image} alt="" className="h-10" />
       </div>
       <span className="text-sm">{label}</span>
@@ -25,23 +23,18 @@ function Card({ txtColor, bgColor, label, icon, image }) {
 
 function OtherCard(props) {
   return (
-    <div className="bg-white bg-opacity-50 backdrop-blur-sm flex justify-center items-center h-[150px] border border-gray-200 rounded-md hover:shadow-md ">
+    <div className="neu flex justify-center items-center h-[150px] rounded-md hover:shadow-md ">
       <div>
         <div className="flex justify-center">
           <img src={props.image} alt="" className="h-10" />
         </div>
-        <p className="text-center">{props.span}</p>
+        <p className="text-center text-[#293948]">{props.span}</p>
       </div>
     </div>
   );
 }
 
 export const Home = () => {
-  const [countScroll, setCountScroll] = useState(0);
-  window.addEventListener("scroll", function () {
-    setCountScroll(this.scrollY);
-  });
-
   return (
     <Layout>
       <div className="lg:mt-20 lg:mb-[80px] mb-10 flex justify-between items-center ">
@@ -50,8 +43,13 @@ export const Home = () => {
           className="lg:w-1/2 w-full relative  lg:block flex flex-col justify-center items-center"
           style={{ lineHeight: 1 }}
         >
-          <p className="text-logo text-[64px] font-bold">LUNA UI</p>
-          <div className="lg:text-[64px] text-[40px] mb-5">
+          <div className="neu block lg:hidden w-fit px-5 rounded-md text-[64px]">
+            <p className=" text-primary">LUNA UI</p>
+          </div>
+          <div className="lg:text-[64px] mt-5 lg:mt-0 text-[40px] text-[#293948] mb-5">
+            <p className=" text-primary font-semibold hidden lg:block">
+              LUNA UI
+            </p>
             <p className="">Component UI</p>
             <p className="lg:mb-6">For TailwindCSS</p>
           </div>
@@ -60,11 +58,8 @@ export const Home = () => {
             Copy the code & paste it to your project
           </p>
 
-          <div className="flex gap-[15px] items-center">
-            <Link
-              to={"/docs/install"}
-              className="btn btn-primary flex items-center"
-            >
+          <div className="">
+            <Link to={"/docs/install"} className="btn btn-primary">
               Get Started
             </Link>
           </div>
@@ -72,17 +67,11 @@ export const Home = () => {
 
         {/* Kanan */}
         <div className="lg:w-1/2 relative lg:flex justify-center items-center hidden">
-          <div
-            className="blur-[56px] bg-gradient-to-tl from-[#bd34fe] from-50% to-[#47caff] to-50% absolute -translate-x-1/2 -translate-y-1/2 transition-all duration-1000 rounded-full w-80 h-80"
-            style={{
-              top: `calc(50% + ${countScroll}px)`,
-              left: `calc(50% - ${countScroll / 2}px)`,
-            }}
-          ></div>
+          <div></div>
           {/* <img src={Logo} height={"180px"} alt="" className="relative" /> */}
-          <p className="text-logo text-[80px] text-red-500 font-bold relative ">
-            LUNA UI
-          </p>
+          <div className="neu w w-80 h-80 rounded-full flex justify-center items-center px-5 text-[64px]">
+            <p className=" text-primary">LUNA UI</p>
+          </div>
         </div>
       </div>
 
@@ -128,7 +117,7 @@ export const Home = () => {
         />
       </div>
 
-      <div className="relative mb-10">
+      <div className="relative text-[#293948] mb-10">
         <div>
           <div className="text-[32px] font-bold mb-5">
             Tailwinds CSS Components
@@ -141,242 +130,178 @@ export const Home = () => {
           </p>
         </div>
         {/* card */}
-        {/* Alert */}
-        <div className="grid lg:grid-cols-3 grid-cols-2 gap-1 mb-1">
-          <div className="hover:shadow-md bg-white rounded-md bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Alert</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+        <div className="flex flex-wrap justify-center gap-2 p-5 neu rounded-md">
+          <div>
+            <div className="hero min-h-[20rem]  w-full">
+              <div className="flex-col hero-content lg:flex-row">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4GaBk6tBXL8MX7PCSPnK4C1S3cJB5juIIQ&usqp=CAU"
+                  className="max-w-sm rounded-lg shadow-2xl"
+                  alt="Tailwind CSS hero component"
                 />
-              </svg>
-            </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
                 <div>
-                  <div className="bg-gray-200 h-5  rounded-md flex items-center p-2 w-40">
-                    <div className="bg-blue-500 h-1 w-36" />
-                  </div>
-                  <div className="bg-gray-200 h-5  rounded-md flex items-center justify-between p-2 w-40 my-1">
-                    <div className="bg-blue-500 h-1 w-14" />
-                    <div className="text-xs text-blue-500 -mt-1">x</div>
-                  </div>
-                  <div className="bg-gray-200 h-5  rounded-md flex items-center justify-between p-2 w-40 my-1">
-                    <div className="bg-blue-500 h-1 w-20" />
-                    <div className="text-xs text-blue-500 -mt-1">x</div>
-                  </div>
+                  <h1 className="text-5xl font-bold">Hello there</h1>
+                  <p className="py-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iste, laboriosam optio! Accusamus quidem recusandae nisi
+                    explicabo eos, labore amet eius.
+                  </p>
+                  <button className="btn">Go</button>
                 </div>
               </div>
             </div>
           </div>
-
-          {/* Navbar */}
-          <div className="hover:shadow-md bg-white rounded-md bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Navbar</h3>
+          <div className="w-fit h-fit">
+            <div className="neu-input rounded-full h-[40px] mb-2 w-[250px] lg:flex hidden px-2 gap-2 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-6 h-6"
+                width={"20px"}
+                height={"20px"}
+                className="text-gray-500"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
                 />
               </svg>
+              <span className=" text-gray-500">Search</span>
             </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
-                <div className="bg-gray-200 h-8 w-3/4 rounded-sm flex justify-between items-center p-2">
-                  <div className="bg-gray-400 h-2 w-6 rounded-sm" />
-                  <div className="flex gap-1">
-                    <div className="bg-gray-400 h-1 w-4" />
-                    <div className="bg-gray-400 h-1 w-4" />
-                    <div className="bg-gray-400 h-1 w-4" />
-                    <div className="bg-gray-400 h-1 w-4" />
-                  </div>
-                </div>
-              </div>
+            <div className="flex flex-wrap gap-2">
+              <button className="neu py-2 px-5 font-semibold text-primary rounded-md">
+                Button
+              </button>
+              <button className="btn">button</button>
+              <button className="btn btn-primary">primary</button>
+              <button className="btn btn-secondary">secondary</button>
+              <button className="btn btn-accent">accent</button>
+              <button className="btn btn-light">light</button>
+            </div>
+          </div>
+          <div className="w-fit h-fit">
+            <div className="neu rounded-md p-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-24 h-24 text-success"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z"
+                  clipRule="evenodd"
+                />
+              </svg>
+
+              <p className="text-center font-bold text-success">Success</p>
+            </div>
+          </div>
+          <div className="w-fit h-fit">
+            <div className="neu rounded-md p-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-24 h-24 text-error"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M9.401 3.003c1.155-2 4.043-2 5.197 0l7.355 12.748c1.154 2-.29 4.5-2.599 4.5H4.645c-2.309 0-3.752-2.5-2.598-4.5L9.4 3.003zM12 8.25a.75.75 0 01.75.75v3.75a.75.75 0 01-1.5 0V9a.75.75 0 01.75-.75zm0 8.25a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-center font-bold text-error">Warning</p>
+            </div>
+          </div>
+          <div className="w-fit h-fit">
+            <div className="neu rounded-md p-5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-24 h-24 text-info"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm8.706-1.442c1.146-.573 2.437.463 2.126 1.706l-.709 2.836.042-.02a.75.75 0 01.67 1.34l-.04.022c-1.147.573-2.438-.463-2.127-1.706l.71-2.836-.042.02a.75.75 0 11-.671-1.34l.041-.022zM12 9a.75.75 0 100-1.5.75.75 0 000 1.5z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <p className="text-center font-bold text-info">Info</p>
             </div>
           </div>
 
-          {/* Card */}
-          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Cards</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
+          <div className="w-96 neu h-56 relative mt-10 p-5">
+            <div className="w-32 h-32 rounded-full neu-active absolute -top-10 flex justify-center items-center">
+              <img
+                src="https://wallpapers.com/images/hd/cool-profile-picture-1ecoo30f26bkr14o.jpg"
+                alt=""
+                className="w-28 h-28 rounded-full object-cover object-center"
+              />
             </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
-                <div className="bg-gray-200 rounded-md flex items-center p-2 w-32">
-                  <div>
-                    <div className="bg-gray-400 h-20 w-28" />
-                    <div className="bg-gray-400 h-[10px] w-10 mt-2" />
-                    <div className="bg-gray-400 h-1 w-24 mt-1" />
-                    <div className="bg-gray-400 h-1 w-24 mt-1" />
-                    <div className="mt-2 flex justify-end">
-                      <div className="bg-gray-400 h-2 w-8 rounded-md" />
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <p className="mt-20 font-semibold">Cool Cat</p>
+            <p>
+              Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!
+              Miaw!! Miaw!!
+            </p>
+            <button className="btn btn-primary w-full text-md">$500</button>
+          </div>
+          <div className="w-96 neu h-56 relative mt-10 p-5">
+            <div className="w-32 h-32 rounded-full neu-active absolute -top-10 flex justify-center items-center">
+              <img
+                src="https://wallpapers.com/images/hd/cool-profile-picture-1ecoo30f26bkr14o.jpg"
+                alt=""
+                className="w-28 h-28 rounded-full object-cover object-center"
+              />
             </div>
+            <p className="mt-20 font-semibold">Cool Cat</p>
+            <p>
+              Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!
+              Miaw!! Miaw!!
+            </p>
+            <button className="btn btn-primary w-full text-md">$500</button>
           </div>
 
-          {/* Badge */}
-          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center  justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Badge</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
+          <div className="navbar justify-between shadow-xl rounded-xl">
+            <div>
+              <a className="neu p-2 rounded-md text-xl">LunaUI</a>
             </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
-                <div className="bg-gray-200 rounded-md flex items-center p-2 w-32 relative">
-                  <div className="bg-gray-300 h-5 w-28" />
-                  <div>
-                    <div className="bg-blue-500 h-3 w-3 rounded-xl absolute -top-1" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Modals */}
-          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Modals</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
-                <div className=" w-40 h-24 border border-gray-100 bg-gray-200 ">
-                  <div className="border-b border-gray-300  h-4 flex  justify-between items-center p-2">
-                    <div className="bg-gray-300 h-1 w-20 mt-1" />
-                    <div className="text-[10px] text-gray-400">x</div>
-                  </div>
-                  <div className="flex justify-center">
-                    <div className="mt-5">
-                      <div className="bg-gray-300 h-1 w-32 mt-1" />
-                      <div className="bg-gray-300 h-1 w-32 mt-1" />
-                      <div className="bg-gray-300 h-1 w-20 mt-1" />
-                    </div>
-                  </div>
-                  <div className="flex justify-end  gap-1 p-2">
-                    <div className="bg-blue-500 h-3 w-8 rounded-sm mt-1" />
-                    <div className="bg-gray-300 h-3 w-8 rounded-sm mt-1" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Footer */}
-          <div className="hover:shadow-md bg-white rounded-md h-auto bg-opacity-40 backdrop-blur-sm">
-            <div className="bg-gray-100 h-8 flex items-center justify-between border-b border-b-gray-200 rounded-t-md p-2">
-              <h3 className="px-2">Footer</h3>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </div>
-            <div className="border border-gray-100  h-[200px] rounded-b-md">
-              <div className="flex justify-center items-center h-full">
-                <div className=" w-52 h-14 bg-gray-200 ">
-                  <div className="flex justify-between items-center h-6 p-2">
-                    <div className="bg-gray-400 h-3 w-10 rounded-md" />
-                    <div className="flex justify-between gap-1">
-                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
-                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
-                      <div className="bg-gray-400 h-2 w-6 rounded-sm" />
-                    </div>
-                  </div>
-                  <div className=" flex justify-center mt-1">
-                    <div className="h-[1px] w-44 bg-gray-500" />
-                  </div>
-                  <div className=" flex justify-center gap-1 mt-4">
-                    <div className="h-[1px] w-3 bg-gray-500" />
-                    <div className="h-[1px] w-20 bg-gray-500" />
-                  </div>
-                </div>
-              </div>
+            <div className="flex items-center gap-2">
+              <a href="..." className="neu p-2 rounded-md text-primary">
+                Menu
+              </a>
+              <a href="..." className="neu p-2 rounded-md text-primary">
+                Menu
+              </a>
+              <a href="..." className="neu p-2 rounded-md text-primary">
+                Menu
+              </a>
+              <a href="..." className="neu p-2 rounded-md text-primary">
+                Menu
+              </a>
+              <a href="..." className="neu p-2 rounded-md text-primary">
+                Menu
+              </a>
             </div>
           </div>
         </div>
+        {/* Alert */}
       </div>
 
       <div className=" rounded-2xl relative ">
         <div className="flex justify-center items-center">
           <div>
-            <h2 className="text-[32px] font-bold text-center mb-5">
+            <h2 className="text-[32px] font-bold text-center text-[#293948] mb-5">
               Luna in other technologies
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-2 mb-5">
+        <div className="grid grid-cols-3 gap-5 mb-5">
           <OtherCard image={laravel} span="Laravel" />
           <OtherCard image={react} span="React" />
           <OtherCard image={vite} span="Vue" />
@@ -471,10 +396,10 @@ export const Home = () => {
           </div>
         </div> */}
       </div>
-      <div className="flex justify-center relative gap-5">
-        <button className="btn">Sponsore Me</button>
-        <button className="btn">Buy Me a coffee</button>
-        <button className="btn">Join For Contribute</button>
+      <div className="flex justify-center relative flex-wrap gap-5">
+        <button className="btn btn-primary">Sponsore Me</button>
+        <button className="btn btn-primary">Buy Me a coffee</button>
+        <button className="btn btn-primary">Join For Contribute</button>
       </div>
     </Layout>
   );

@@ -6,22 +6,22 @@ const IntallPage = () => {
   return (
     <LayoutContent>
       {/* Title */}
-      <div className=" relative border-b-2 border-gray-200 mb-4 py-2 group">
+      <div className=" relative mb-4 py-2 group ">
         <div className="absolute -left-12 text-transparent group-hover:text-[#646cff] transition-all duration-300">
           <span className="text-5xl">#</span>
         </div>
-        <h2 className="text-[30px] font-bold ">
+        <h2 className="text-[30px] font-bold neu p-2 rounded-md text-primary">
           Install LUNA UI as a Tailwind CSS plugin?
         </h2>
       </div>
       {/* End Title */}
       {/* Tab */}
-      <div className="border-b-2 border-gray-200 flex mb-4 h-12">
+      <div className="flex mb-4 h-12 text-[#293948] font-semibold">
         <Link
           to={"/docs/install"}
-          className="w-32 bg-neutral border-2 border-[#29292d] border-b-0 rounded-t-lg translate-y-[2px] flex justify-center items-center "
+          className="w-32 neu rounded-md translate-y-[2px] flex justify-center items-center "
         >
-          <p className="text-white">Tailwind Plugin</p>
+          <p className="">Tailwind Plugin</p>
         </Link>
 
         {/* <Link
@@ -32,7 +32,7 @@ const IntallPage = () => {
         </Link> */}
       </div>
       {/* End Tab */}
-      <p className="mb-4">
+      <p className="mb-4 ">
         You need{" "}
         <a
           href="https://nodejs.org/en"
@@ -80,7 +80,7 @@ const IntallPage = () => {
       </p>
       <div className="grid lg:grid-cols-4 grid-cols-2 gap-5">
         {/* Next JS */}
-        <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
+        <div className="rounded-md p-5 hover:scale-105 transition duration-200 cursor-pointer neu">
           <div>
             <svg
               width="96"
@@ -150,7 +150,7 @@ const IntallPage = () => {
         </div>
 
         {/* SVELTE */}
-        <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
+        <div className="rounded-md p-5 hover:scale-105 transition duration-200 cursor-pointer neu">
           <div>
             <svg
               width="96"
@@ -178,7 +178,7 @@ const IntallPage = () => {
         </div>
 
         {/* NUXT */}
-        <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
+        <div className="rounded-md p-5 hover:scale-105 transition duration-200 cursor-pointer neu">
           <div>
             <svg
               width="96"
@@ -199,7 +199,7 @@ const IntallPage = () => {
         </div>
 
         {/* ASTRO */}
-        <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
+        <div className="rounded-md p-5 hover:scale-105 transition duration-200 cursor-pointer neu">
           <div>
             <svg
               width="96"
@@ -220,7 +220,7 @@ const IntallPage = () => {
         </div>
 
         {/* VUE */}
-        <div className="rounded-md p-5 bg-gray-200 hover:scale-105 transition duration-200 cursor-pointer">
+        <div className="rounded-md p-5 hover:scale-105 transition duration-200 cursor-pointer neu">
           <div>
             <svg
               width="96"

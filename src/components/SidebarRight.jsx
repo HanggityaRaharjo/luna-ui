@@ -14,8 +14,8 @@ const SidebarRight = ({ menuData }) => {
       >
         <div style={{ height: "60px" }}></div>
         {/* Sidebar Menu */}
-        <div className="mt-3">
-          <div className="bg-neutral p-5 rounded-lg mb-3 text-white">
+        <div className="mt-3 px-2">
+          <div className="neu-active rounded-md p-5 mb-3 text-[#293948]">
             <p className="mb-5">
               Use luna grid library to auto layouting or responsive design
             </p>

@@ -118,13 +118,16 @@ body {
 }
 
 #navbar-true {
-  background: white;
-  border-bottom: 2px solid rgb(229 231 235);
+  border-bottom: 1px solid transparent;
   transition: all 0.2s;
+  background: #e9edf0;
+  box-shadow:
+    -10px -10px 30px rgba(255, 255, 255, 0.6),
+    10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 #navbar-false {
   background: transparent;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: all 0.1s;
 }
 /* .text-pm {
@@ -180,3 +183,41 @@ a {
     opacity: 1;
   }
 }
+/*
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+*/
+
+/* 
+.btn::before {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0px;
+  background: rgba(0, 0, 0, 0.05);
+  width: 0px;
+  content: "";
+}
+*/
+/* 
+.btn:active::before {
+  height: 101%;
+  background: rgba(0, 0, 0, 0.05);
+  width: 101%;
+  animation-name: waves-effect;
+  animation-duration: 0.1s;
+}
+@keyframes waves-effect {
+  0% {
+    height: 0%;
+    background: rgba(0, 0, 0, 0);
+    width: 0%;
+  }
+  100% {
+    height: 101%;
+    background: rgba(0, 0, 0, 0.05);
+    width: 101%;
+  }
+}*/

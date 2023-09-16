@@ -21,6 +21,7 @@ const ButtonPage = () => {
         </p>
         <ViewComponent>
           <button className="btn">button</button>
+
           <button className="btn btn-primary">primary</button>
           <button className="btn btn-secondary">secondary</button>
           <button className="btn btn-accent">accent</button>

@@ -946,3 +946,39 @@ table.table.table-zebra tbody tr:nth-child(even) {
 }
 */
 /*  ------------------------- End Text Input -------------------------------------- */
+.neu {
+  box-shadow:
+    -2px -2px 5px rgba(255, 255, 255, 0.6),
+    2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.neu-active {
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.neu-input {
+  box-shadow:
+    inset 2px 2px 5px rgba(0, 0, 0, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.6);
+}
+
+.neu-card {
+  box-shadow:
+    -10px -10px 30px rgba(255, 255, 255, 0.6),
+    10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+.text-shadow {
+  text-shadow: 0 0 6px #000000;
+}
+
+.text-primary {
+  background: -webkit-linear-gradient(#028cc8, #028cc8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+code.language-html,
+code.language-terminal,
+code.language-javascript {
+  background: transparent !important;
+}

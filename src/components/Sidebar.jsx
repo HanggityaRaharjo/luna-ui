@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [stateUrl, setStateUrl] = useState(url);
 
   return (
-    <div id="element-testing" className="text-[#1f2937] lg:w-[20%]">
+    <div id="element-testing" className="text-gray-500 lg:w-[20%]">
       <div
         id="sidebar-menu"
         className="fixed hidden lg:block"
@@ -35,7 +35,7 @@ const Sidebar = () => {
           </div>
         </Link>
         {/* Sidebar Menu */}
-        <div className="mt-3">
+        <div className="mt-3 px-5">
           <div className="flex items-center gap-2 mb-3">
             <svg
               stroke="currentColor"
@@ -48,14 +48,14 @@ const Sidebar = () => {
               />
             </svg>
 
-            <span className="font-bold opacity-50">Guide</span>
+            <span className="font-bold ">Guide</span>
           </div>
           <Link to={"/docs/install"} className="">
             <div
-              className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
+              className={`w-56 rounded-md p-2 neu  ${
                 stateUrl == "/docs/install" || stateUrl == "/docs/cdn"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Getting Started </span>
@@ -65,20 +65,13 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/docs/color"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span className=""> Colors </span>
             </div>
           </Link>
-
-          {/* Divider */}
-          <div
-            className="mb-3 border-b border-gray-200"
-            style={{ marginRight: "50px" }}
-          ></div>
-          {/* End Divider */}
 
           <div className="flex items-center gap-2 mb-3">
             <svg
@@ -91,15 +84,15 @@ const Sidebar = () => {
               <path d="M5.25 5.25a3 3 0 00-3 3v10.5a3 3 0 003 3h10.5a3 3 0 003-3V13.5a.75.75 0 00-1.5 0v5.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5V8.25a1.5 1.5 0 011.5-1.5h5.25a.75.75 0 000-1.5H5.25z" />
             </svg>
 
-            <span className="font-bold opacity-50">Layout</span>
+            <span className="font-bold">Layout</span>
           </div>
 
           <Link to={"/components/hero"}>
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/hero"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Hero </span>
@@ -110,20 +103,13 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/footer"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Footer </span>
             </div>
           </Link>
-
-          {/* Divider */}
-          <div
-            className="mb-3 border-b border-gray-200"
-            style={{ marginRight: "50px" }}
-          ></div>
-          {/* End Divider */}
 
           <div className="flex items-center gap-2 mb-3">
             <svg className="w-6 h-6 stroke-current stroke-2 text-primary fill-none">
@@ -134,15 +120,15 @@ const Sidebar = () => {
               />
             </svg>
 
-            <span className="font-bold opacity-50">Components</span>
+            <span className="font-bold">Components</span>
           </div>
 
           <Link to={"/components/navbar"} className="">
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/navbar"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Navbar </span>
@@ -153,8 +139,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/alert"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Alert </span>
@@ -164,8 +150,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/badge"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Badge </span>
@@ -175,8 +161,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/button"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Button </span>
@@ -187,8 +173,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/card"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Card </span>
@@ -199,8 +185,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/progress"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Progress </span>
@@ -211,8 +197,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/dropdown"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Dropdown </span>
@@ -223,8 +209,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/table"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Table </span>
@@ -235,21 +221,14 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/modal"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Modal </span>
               <span className="badge badge-primary">Cooming Soon</span>
             </div>
           </Link>
-
-          {/* Divider */}
-          <div
-            className="mb-3 border-b border-gray-200"
-            style={{ marginRight: "50px" }}
-          ></div>
-          {/* End Divider */}
 
           <div className="flex items-center gap-2 mb-3">
             <svg
@@ -269,8 +248,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/text-input"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Text Input </span>
@@ -281,8 +260,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/select"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Select </span>
@@ -293,8 +272,8 @@ const Sidebar = () => {
             <div
               className={`w-56 rounded-lg p-2 hover:bg-slate-200 transition duration-150  ${
                 stateUrl == "/components/toggle"
-                  ? "bg-neutral text-white hover:bg-neutral "
-                  : "bg-transparent"
+                  ? "neu-active text-primary font-bold mb-5"
+                  : "neu font-semibold mb-5"
               }`}
             >
               <span> Toggle </span>

@@ -7,7 +7,7 @@ const HeroPage = () => {
   return (
     <LayoutContent>
       {/* Title */}
-      <div className=" relative border-b-2 border-gray-200 mb-4 py-2 group ">
+      <div className=" relative neu px-2 rounded-md border-b-2 border-gray-200 mb-4 py-2 group ">
         <div className="absolute -left-8 text-transparent group-hover:text-[#646cff] transition-all duration-300">
           <span className="text-5xl">#</span>
         </div>
@@ -21,18 +21,16 @@ const HeroPage = () => {
           <span className="">#</span> Hero
         </p>
         <ViewComponent>
-          <div>
-            <div className="hero min-h-[20rem]  w-full">
-              <div className="hero-content text-center">
-                <div>
-                  <h1 className="text-5xl font-bold">Hello there</h1>
-                  <p className="py-6">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iste, laboriosam optio! Accusamus quidem recusandae nisi
-                    explicabo eos, labore amet eius.
-                  </p>
-                  <button className="btn">Go</button>
-                </div>
+          <div className="hero min-h-[20rem]  w-full">
+            <div className="hero-content text-center">
+              <div>
+                <h1 className="text-5xl font-bold">Hello there</h1>
+                <p className="py-6">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
+                  laboriosam optio! Accusamus quidem recusandae nisi explicabo
+                  eos, labore amet eius.
+                </p>
+                <button className="btn">Go</button>
               </div>
             </div>
           </div>
@@ -67,7 +65,7 @@ const HeroPage = () => {
             <div className="hero min-h-[20rem]  w-full">
               <div className="flex-col hero-content lg:flex-row">
                 <img
-                  src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4GaBk6tBXL8MX7PCSPnK4C1S3cJB5juIIQ&usqp=CAU"
                   className="max-w-sm rounded-lg shadow-2xl"
                   alt="Tailwind CSS hero component"
                 />
@@ -88,7 +86,7 @@ const HeroPage = () => {
           type="html"
           code={`<div className="hero min-h-screen">
   <div className="flex-col hero-content lg:flex-row">
-  <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component"/>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4GaBk6tBXL8MX7PCSPnK4C1S3cJB5juIIQ&usqp=CAU" className="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component"/>
     <div>
       <h1 className="text-5xl font-bold">Hello there</h1>
       <p className="py-6">
@@ -115,7 +113,7 @@ const HeroPage = () => {
             <div className="hero min-h-[20rem]  w-full">
               <div className="flex-col hero-content lg:flex-row-reverse">
                 <img
-                  src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4GaBk6tBXL8MX7PCSPnK4C1S3cJB5juIIQ&usqp=CAU"
                   className="max-w-sm rounded-lg shadow-2xl"
                   alt="Tailwind CSS hero component"
                 />
@@ -136,7 +134,7 @@ const HeroPage = () => {
           type="html"
           code={`<div className="hero min-h-screen">
   <div className="flex-col hero-content lg:flex-row-reverse">
-  <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component"/>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp4GaBk6tBXL8MX7PCSPnK4C1S3cJB5juIIQ&usqp=CAU" className="max-w-sm rounded-lg shadow-2xl" alt="Tailwind CSS hero component"/>
     <div>
       <h1 className="text-5xl font-bold">Hello there</h1>
       <p className="py-6">
