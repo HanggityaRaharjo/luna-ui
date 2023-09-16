@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 
-const NavbarContent = () => {
+const NavbarContent = ({ isSidebarShow, setIsSidebarShow }) => {
   return (
     <nav className="flex justify-center bg-[#e9edf0]  items-center fixed w-full h-[60px]  text-[#1f2937] z-[999]">
-      <div className="flex justify-between w-full max-w-[1350px] h-full relative">
+      <div className="flex justify-between w-full max-w-[1350px] h-full relative items-center">
         <div className="flex items-center gap-[15px] pl-[35px] pr-[49px] w-[289px]">
           <Link to={"/"}>
             <div className="items-center  flex gap-[10px]">
@@ -170,6 +170,26 @@ const NavbarContent = () => {
           </div>
         </div>
         {/* End Kanan */}
+        <div className="pr-[35px]">
+          {/* Responsive Nav */}
+          <div className="flex items-center lg:hidden">
+            <button onClick={() => setIsSidebarShow(true)}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          {/* Responsive Nav */}
+        </div>
       </div>
     </nav>
   );

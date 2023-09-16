@@ -244,10 +244,7 @@ export const Home = () => {
               />
             </div>
             <p className="mt-20 font-semibold">Cool Cat</p>
-            <p>
-              Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!
-              Miaw!! Miaw!!
-            </p>
+            <p>Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!</p>
             <button className="btn btn-primary w-full text-md">$500</button>
           </div>
           <div className="w-96 neu h-56 relative mt-10 p-5">
@@ -259,14 +256,11 @@ export const Home = () => {
               />
             </div>
             <p className="mt-20 font-semibold">Cool Cat</p>
-            <p>
-              Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!
-              Miaw!! Miaw!!
-            </p>
+            <p>Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!! Miaw!!</p>
             <button className="btn btn-primary w-full text-md">$500</button>
           </div>
 
-          <div className="navbar justify-between shadow-xl rounded-xl">
+          <div className="navbar justify-between shadow-xl rounded-xl hidden lg:flex">
             <div>
               <a className="neu p-2 rounded-md text-xl">LunaUI</a>
             </div>
